@@ -32,6 +32,7 @@
 \usepackage{graphicx}
 \usepackage[absolute]{textpos}
 \usepackage[final]{pdfpages}
+\usepackage[framed,numbered,autolinebreaks,useliterate]{mcode}
 \def\dbar{{\mathchar'26\mkern-12mu d}} 
 %\usepackage[options]{nom_du_package}
 
@@ -51,7 +52,7 @@
 \newcolumntype{Z}[3]{>{#1\hspace{0pt}\arraybackslash}#2{#3}}
 
 % Definitions des parametres de la page titre
-\TitreProjet{Rapport de laboratoire 0}                         % Titre du projet
+\TitreProjet{Rapport de laboratoire 1}                         % Titre du projet
 \TitreRapport{Transmission des ondes électromagnétiques}       % Titre du rapport
 \Destinataire{M. Dominique Grenier}         % Nom(s) du destinataire
 \TableauMembres{%                                     % Tableau des membres de l'equipe
@@ -59,7 +60,7 @@
    910\,097\,879  & Francis Valois \\\hline        % matricule & nom & \\\hline
            % matricule & nom & \\\hline     % matricule & nom & \\\hline
 }
-\DateRemise{21 septembre 2012}                           % Date de remis
+\DateRemise{5 octobre 2012}                           % Date de remis
 
 
 % Corps du document
@@ -67,13 +68,13 @@
 \begin{document}
 
 %   Chapitres
-\input{tex/introduction}
-%\input{tex/contenu}
-\input{tex/analyse}
-\input{tex/conclusion}
+%\input{tex/introduction}
+\input{tex/contenu}
+%\input{tex/analyse}
+%\input{tex/conclusion}
 
-\appendix
-\input{tex/annexes}
+%\appendix
+%\input{tex/annexes}
 
 \end{document}
 % Fin du document

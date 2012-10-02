@@ -8,5 +8,140 @@
 
 \chapter{Préparation}
 \label{s:experimentation}
-\section{Question 1}
+\section{Projet 1}
 
+L'objectif fondamental de ce laboratoire est de déterminer le potentiel électrique en chaque point d'un système qui présente les caractéristiques montrées sur la figure 1 de l'énoncé de laboratoire. 
+
+\paragraph{} On sait de la physique électrique que l'équation de Laplace pour des éléments infinitésimaux s'écrit comme suit:
+
+\begin{equation}
+\label{eq:1}
+\nabla ^2 V = 0
+\end{equation}
+
+\paragraph{}Or, dans la pratique, il est très difficile d'implanter des méthodes de calculs qui utilisent des équations symboliques. Les géométries réelles présentent certaines difficultés de modélisation et il est beaucoup plus commode de les représenter par des niveaux discrets. Or, il est possible de réécrire les équations obtenues pour une modélisation symbolique selon des équations discrètes. 
+
+\paragraph{}Soit une fonction $V(x,y,z) = f_1(x)f_2(y)f_3(z) $ en coordonnées cartésiennes. L'équation \ref{eq:1} peut se développer comme suit:
+
+\begin{equation}
+\frac{\nabla ^2 V}{V} = \frac{1}{f_1}\frac{\partial^2 V}{\partial x^2} + \frac{1}{f_2}\frac{\partial^2 V}{\partial y^2} + \frac{1}{f_3}\frac{\partial^2 V}{\partial z^2}
+\end{equation}
+
+\paragraph{} Soit un maillage d'analyse qui correspond à un plan de type (x,y), tel que la figure 1 présentée dans l'énoncé du laboratoire. Si on pose $a$ comme le pas entre deux points d'analyse, on peut effectuer une approximation d'ordre 1 de chacune des dérivées secondes. Pour une dérivée:
+
+\begin{align}
+\left[ \frac{\partial^2 V}{\partial x}\right]_{(0,0,0)} &= \frac{1}{a}\left( \left[ \frac{\partial V}{\partial x}\right]_{(a/2,0,0)} - \left[ \frac{\partial V}{\partial x}\right]_{(-a/2,0,0)} \right)
+\end{align}
+
+Au moyen d'une approximation d'ordre 1, on obtient:
+
+\begin{align}
+\left[ \frac{\partial^2 V}{\partial x}\right]_{(0,0,0)} &= \frac{1}{a}\left( \frac{V_{(a,0,0)} - V_{(0,0,0)}}{a} - \frac{V_{(0,0,0)} - V_{(-a,0,0)}}{a} \right)\\
+&\approx \frac{1}{a^2} \left( V_{(-a,0,0)} + V_{(a,0,0)} - 2 V_{(0,0,0)} \right)
+\end{align}
+
+On utilise la même logique pour la dérivée seconde dans l'axe y et on négligera celle en z puisque le repère d'analyse ne présente pas de coordonnées en z.
+ 
+\begin{align}
+\left[ \frac{\partial^2 V}{\partial x}\right]_{(0,0,0)} &\approx \frac{1}{a^2} \left( V_{(0,-a,0)} + V_{(0,a,0)} - 2 V_{(0,0,0)} \right)
+\end{align}
+
+La solution discrète de l'équation de laplace dans le domaine d'analyse concerné est donné par:
+
+\begin{equation}
+V_{(0,0,0)} \approx \frac{1}{4} \left(V_{(-a,0,0)} + V_{(a,0,0)} + V_{(0,-a,0)} + V_{(0,a,0)} \right)
+\end{equation}
+
+\paragraph{}Les développements précédents sont valides seulement dans le cas où il n'y a qu'un diélectrique (quand on est a l'intérieur d'un diélectrique). Il va de soi que lorsqu'on fait intervenir la notion d'interface entre deux surfaces et de continuité, il faut adapté les équations en conséquences. On obtient l'équation de Laplace que si $\nabla \epsilon = 0$. Dans le cas où plusieurs diélectriques entrent en jeu, cela n'est plus vérifié.  
+
+\paragraph{}Afin de compléter l'analyse des bases théoriques utiles afin de réaliser cette expérience, on effectue l'analyse au moyen du théorème de Gauss du potentiel en un point. La surface d'analyse est un primse rectangulaire de dimensions $a \times a \times \Delta z $, où $\Delta z$ est une hauteur infinitésimale. On suppose qu'il n'y a pas de charges résiduelles en chaque point. Le théorème de Gauss s'exprime alors comme suit:
+
+\begin{equation}
+\oint_S D \cdot dS = \oint_S \epsilon E \cdot dS = -\oint_S \epsilon \nabla V \cdot dS  = 0
+\end{equation}
+
+Le résultat précédent conduit à un résultat qui est valide pour tous les points du plan d'analyse du laboratoire:
+
+\begin{equation}
+V_{(0,0,0)} = \frac{V_{(-a,0,0)} + V_{(a,0,0)}}{4} + \frac{\epsilon_{r1} V_{(0,-a,0)} + \epsilon_{r2} V_{(0,a,0)}}{2(\epsilon{r1} + \epsilon_{r2})}
+\end{equation}
+
+Ce qui termine l'analyse du passage des solutions aux équations continues vers les solutions utilisant la théorie des différences finies et appliquées à ce laboratoire.
+\section{Projet 2}
+
+La fonction MDF écrire utilise une méthode par relaxation. 
+
+\subsection{Algorithme}
+\begin{lstlisting}
+function V  = mdf(m, n, er1, er2, d, w, tol)
+    
+    %Creation des matrices et des variables
+    V = zeros(n+1, m+1);
+    permitivityMatrix = zeros(n+1, m+1);
+    oldMatrix = zeros(n+1, m+1);
+    tolerence = false;
+    
+    %Remplissage des permitivites
+    if d == 0; 
+        permitivityMatrix(2:n, 2:m) = er2;
+    else
+        permitivityMatrix(2:n-d, 2:m) = er2;
+        permitivityMatrix(n+1-d:n, 2:m) = er1;
+    end
+    
+    %Position du conducteur, de la permitivite du conducteur et du potentiel
+    halfW = floor((w+1)/2);
+    if mod(m+1,2) == 0
+        halfM = (m+1)/2;
+    else
+        halfM = floor((m+1)/2);
+    end    
+    V(n+1-d, halfM+1-halfW:halfM+w+1-halfW) = 1;
+    
+    %Calcul du potentiel de chaque point
+    while tolerence == false,
+        for i=2:n,
+            for j=2:m,
+                %Calcul du potentiel du point avec sauvegarde de l'ancienne
+                %valeur pour le calcul de tolerence.
+                oldMatrix(i,j) = V(i,j);
+                
+                %Sur le conducteur
+                if( i == (n+1-d) && ...
+                  ( j >= halfM+1-halfW && j <=  halfM+w+1-halfW))
+                    V(i,j) = 1;
+                %Sur la ligne de separation du dielectrique
+                elseif (i == n+1-d)
+                    V(i,j) = (V(i,j-1) + V(i,j+1))/4 + ...
+                    (permitivityMatrix(i+1,j) * V(i+1,j) + ...
+                    permitivityMatrix(i-1,j) * V(i-1,j))/(2*(er2+er1));
+                %Sur le reste
+                else
+                    V(i,j) = (V(i,j-1) + V(i,j+1) + V(i+1,j) + V(i-1,j))/4;
+                end              
+            end
+        end
+        
+        %Verification de la tolerence : difference entre chaques matrices
+        %et extraction de la valeur maximale
+        if(max(abs(oldMatrix - V)) < tol)
+            tolerence = true;
+        else
+            tolerence = false;
+        end
+    end
+end
+
+
+\end{lstlisting}
+
+\subsection{Guide d'utilisation}
+
+\textit{Un fichier nommé mda.m est disponible dans le répertoire remis sur pixel.}
+\begin{enumerate}
+\item Ouvrir le fichier mda.m présent dans le répertoire au moyen de Matlab;
+\item Lancer le fichier;
+\item Dans l'interpréteur, fixer les paramètres d'appel de la fonction selon la même nomenclature qu'utilisée dans l'énoncé de laboratoire. Pour se faire, utiliser une syntaxe du genre: m=10; etc. 
+\item Lorsque les paramètres sont définis de la même manière que dans l'énoncé de laboratoire, entrer la ligne suivante: V  = mdf(m, n, er1, er2, d, w, tol);
+\item Une matrice contenant le résultat devrait s'afficher dans l'interpréteur. 
+\end{enumerate}
