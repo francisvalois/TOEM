@@ -6,7 +6,7 @@
 % modifié par Francis Valois, Université Laval
 % 31/01/2011 - version 1.0 - Création du document
 
-\chapter{Préparation}
+
 \label{s:experimentation}
 \section{Projet 1}
 
@@ -69,7 +69,7 @@ V_{(0,0,0)} = \frac{V_{(-a,0,0)} + V_{(a,0,0)}}{4} + \frac{\epsilon_{r1} V_{(0,-
 Ce qui termine l'analyse du passage des solutions aux équations continues vers les solutions utilisant la théorie des différences finies et appliquées à ce laboratoire.
 \section{Projet 2}
 
-La fonction MDF écrire utilise une méthode par relaxation. 
+La fonction MDF écrite utilise une méthode par relaxation. 
 
 \subsection{Algorithme}
 \begin{lstlisting}
@@ -145,3 +145,153 @@ end
 \item Lorsque les paramètres sont définis de la même manière que dans l'énoncé de laboratoire, entrer la ligne suivante: V  = mdf(m, n, er1, er2, d, w, tol);
 \item Une matrice contenant le résultat devrait s'afficher dans l'interpréteur. 
 \end{enumerate}
+
+\subsection{Reproduction des exemples}
+\subsubsection{Exemple 7.5}
+Pour prouver la validité de notre fonction, il suffit de faire la différence entre chaque point de la matrice de tension obtenue et celle fournie et de vérifier que la différence maximale est en dessous d'un certain seuil. Dans notre cas, nous fixons ce seuil à $10^{-6}$.
+
+La matrice founie est la suivante :
+
+\[V_{prof}  = \left(\begin{array}{ccccccc}
+0 & 0 			& 0 			& 0 			& 0 			& 0 			& 0 \\
+0 & 0.07043931 	& 0.12599119 	& 0.14570741	& 0.12599119	& 0.07043931 	& 0 \\
+0 & 0.15576603 	& 0.28781803 	& 0.33084727 	& 0.28781803 	& 0.15576603 	& 0 \\
+0 & 0.26480681 	& 0.53866761 	& 0.60204563  	& 0.53866761 	& 0.26480681 	& 0 \\
+0 & 0.36479358 	& 1				& 1				& 1			 	& 0.36479358 	& 0 \\
+0 & 0.19436750 	& 0.41267643 	& 0.45633821	& 0.41267643 	& 0.19436750 	& 0 \\
+0 & 0 			& 0 			& 0 			& 0 			& 0 			& 0 
+\end{array} \right)\]
+
+La matrice obtenu avec un seuil de tolérence de $10^{-9}$ par notre programme est la suivante :
+\[V_{MDF}  = \left(\begin{array}{ccccccc}
+0 & 0 			& 0 			& 0 			& 0 			& 0 			& 0 \\
+0 & 0.07043930 	& 0.12599118 	& 0.14570741	& 0.12599118	& 0.07043930 	& 0 \\
+0 & 0.15576603 	& 0.28781803 	& 0.33084727 	& 0.28781803 	& 0.15576603 	& 0 \\
+0 & 0.26480681 	& 0.53866761 	& 0.60204562  	& 0.53866761 	& 0.26480681 	& 0 \\
+0 & 0.36479358 	& 1				& 1				& 1			 	& 0.36479358 	& 0 \\
+0 & 0.19436750 	& 0.41267643 	& 0.45633821	& 0.41267643 	& 0.19436750 	& 0 \\
+0 & 0 			& 0 			& 0 			& 0 			& 0 			& 0 
+\end{array} \right)\]
+
+Ainsi, en appliquant la différence des deux matrices et en obtenant le résultat maximum, il est possible de vérifer la différence maximale entre ces deux matrices. Dans notre cas, la différence maximale est de $4.5 \cdot 10^{-9}$ ce qui est très en dessous de notre seuil fixé de $10^{-6}$. Cette valeur semble être plus petite que les nombres contenus dans chacune des matrices car pour simplifier la vie du lecteur, nous avons réduits les chiffres significatif présenté dans le rapport mais avons effectué les différents calculs avec les vraies valeurs.
+
+\subsubsection{Exemple 7.6}
+La même méthode que l'exemple précédent à été utilisé.
+
+La matrice founie est la suivante :
+\[V_{prof}  = \left(\begin{array}{ccccccc}
+0 & 0 			& 0 			& 0 			& 0 			& 0 			& 0 \\
+0 & 0.06983505 	& 0.12534299 	& 0.14509465	& 0.12534299	& 0.06983505 	& 0 \\
+0 & 0.15399721 	& 0.28644227 	& 0.32969262 	& 0.28644227 	& 0.15399721 	& 0 \\
+0 & 0.25971150 	& 0.53673627 	& 0.60079129  	& 0.53673627 	& 0.25971150 	& 0 \\
+0 & 0.34811255 	& 1				& 1				& 1			 	& 0.34811255 	& 0 \\
+0 & 0.18987646 	& 0.41139327 	& 0.45569664	& 0.41139327 	& 0.18987646 	& 0 \\
+0 & 0 			& 0 			& 0 			& 0 			& 0 			& 0 \\
+\end{array} \right)\]
+
+La matrice obtenu avec un seuil de tolérence de $10^{-9}$ par notre programme est la suivante :
+\[V_{prof}  = \left(\begin{array}{ccccccc}
+0 & 0 			& 0 			& 0 			& 0 			& 0 			& 0 \\
+0 & 0.06983505 	& 0.12534299 	& 0.14509465	& 0.12534299	& 0.06983505 	& 0 \\
+0 & 0.15399721 	& 0.28644227 	& 0.32969262 	& 0.28644227 	& 0.15399721 	& 0 \\
+0 & 0.25971150 	& 0.53673627 	& 0.60079129  	& 0.53673627 	& 0.25971150 	& 0 \\
+0 & 0.34811255 	& 1				& 1				& 1			 	& 0.34811255 	& 0 \\
+0 & 0.18987646 	& 0.41139327 	& 0.45569664	& 0.41139327 	& 0.18987646 	& 0 \\
+0 & 0 			& 0 			& 0 			& 0 			& 0 			& 0 \\
+\end{array} \right)\]
+
+Ainsi, en appliquant la différence des deux matrices et en obtenant le résultat maximum, il est possible de vérifer la différence maximale entre ces deux matrices. Dans notre cas, la différence maximale est de $5.1 \cdot 10^{-9}$ ce qui est très en dessous de notre seuil fixé de $10^{-6}$. Pour la même raison que précédemment, la valeur possède plus de chiffres significatifs que ceux affiché dans le présent rapport dû à l'utilisation de valeurs plus précises que celles présentées.
+
+Ainsi, les deux exemples précédents semblent prouver que la fonction crée possède une précision excellente pour ce qui lui est demandé. Il est donc possible de l'utiliser pour d'autre calculs comme ceux de la section suivante.
+
+\subsection{Programme selon la géométrie et les diélectriques}
+Il est important de noter que le programme utilisé n'utilise pas tout à fait la nomenclature mentionné dans l'énoncé du laboratoire. Il est demandé dans l'énoncé que la matrice produite ai son point $(1,1)$ dans le coin inférieur gauche. Toutefois, dans notre cas, la matrice possède son point $(1,1)$ dans le coin supérieur gauche. Ce choix est surtout justifié par la simplification de l'algorithme sachant que les indices de Matlab sont gêrés de cette façon. Ainsi, pour suivre la nomenclature demandé pour les graphiques, l'axe Y à tout simplement été inversé. C'est pourquoi, si l'algorithme est utilisé pour répliquer les graphiques, il va falloir inverser la matrice en Y pour que les axes concordent.
+
+\subsubsection{Diélectrique 1}
+Le graphique représenté par la figure \ref{fig1} est le résultat de l'algorithme avec les paramètres suivante : 
+
+\begin{displaymath}
+\epsilon_{r1} = \epsilon_{r2} = 1, w= 10 u, d = 4 u
+\end{displaymath}
+Comme le montre la figure, la vitesse de chute de la tension est en concordance avec $\epsilon$ et w ainsi que d sont bien positionné.
+
+\subsubsection{Diélectrique 2}
+Le graphique représenté par la figure \ref{fig2} est le résultat de l'algorithme avec les paramètres suivante : 
+
+\begin{displaymath}
+\epsilon_{r1} = \epsilon_{r2} = 1, w= 10 u, d = 20 u
+\end{displaymath}
+Comme on devait s'y attendre, les pics de tension du conducteur sont déplacé de 16 unités vers le Y positif. De plus, sachant que la seule variable modifiée est la position du conducteur, la courbe possède le même taux de décroissance que la courbe précédente.
+
+\subsubsection{Diélectrique 3}
+Le graphique représenté par la figure \ref{fig3} est le résultat de l'algorithme avec les paramètres suivante : 
+
+\begin{displaymath}
+\epsilon_{r1} = \epsilon_{r2} = 16, w= 4 u, d = 4 u
+\end{displaymath}
+
+Contrairement aux deux courbes précédentes, cette courbe possède un taux de décroissance beaucoup plus élevé dû au $\epsilon$ 16 fois plus grand.
+
+\subsubsection{Diélectrique 4}
+Le graphique représenté par la figure \ref{fig4} est le résultat de l'algorithme avec les paramètres suivante : 
+
+\begin{displaymath}
+\epsilon_{r1} = \epsilon_{r2} = 16, w= 10 u, d = 4 u
+\end{displaymath}
+
+Cette courbe possède le même taux de décroissance que la précédente mais celle-ci possède un conducteur plus long.
+
+\subsubsection{Diélectrique 5}
+Le graphique représenté par la figure \ref{fig5} est le résultat de l'algorithme avec les paramètres suivante : 
+
+\begin{displaymath}
+\epsilon_{r1} = \epsilon_{r2} = 16, w= 20 u, d = 4 u
+\end{displaymath}
+Cette courbe possède le même taux de décroissance que les 2 précédentes mais celle-ci possède un conducteur encore plus long soit la moitié du système ce qui rend les tensions aux extrêmité en X plus élevées que les deux courbes précédentes.
+
+\subsubsection{Diélectrique 6}
+Le graphique représenté par la figure \ref{fig6} est le résultat de l'algorithme avec les paramètres suivante : 
+
+\begin{displaymath}
+\epsilon_{r1} = 2, \epsilon_{r2} = 1, w= 10 u, d = 4 u
+\end{displaymath}
+Cette courbe est celle attendue pour un système possèdant deux diélectriques distincts. Dans notre cas les deux diélectriques ne diffèrent que d'une permitivité unitaire ce qui ne se voit pas amplement sur le graphique mais qui tout de même fait varier la décroissance plus ou moins vite en fonction de la position en X et Y.
+
+\subsubsection{Diélectrique 7}
+Le graphique représenté par la figure \ref{fig7} est le résultat de l'algorithme avec les paramètres suivante : 
+
+\begin{displaymath}
+\epsilon_{r1} = 16, \epsilon_{r2} = 1, w= 10 u, d = 4 u
+\end{displaymath}
+
+Cette dernière courbe est sensiblement pareille que la précédente mais cette fois ci, la différence de permitivité entre les deux diélectriques est de 16.
+\begin{figure}
+	\centering
+	\mbox{
+		\subfigure[Diélectrique 1]{\includegraphics[width=3in]{graph1.png} \label{fig1}}
+		\quad
+		\subfigure[Diélectrique 2]{\includegraphics[width=3in]{graph2.png} \label{fig2}}
+	}
+\end{figure}
+\begin{figure}
+	\centering
+	\mbox{
+		\subfigure[Diélectrique 3]{\includegraphics[width=3in]{graph3.png} \label{fig3}}
+		\quad
+		\subfigure[Diélectrique 4]{\includegraphics[width=3in]{graph4.png} \label{fig4}}
+	}
+\end{figure}
+\begin{figure}
+	\centering
+	\mbox{
+		\subfigure[Diélectrique 5]{\includegraphics[width=3in]{graph5.png} \label{fig5}}
+		\quad
+		\subfigure[Diélectrique 6]{\includegraphics[width=3in]{graph6.png} \label{fig6}}
+	}
+\end{figure}
+\begin{figure}
+	\centering
+	\mbox{
+		\subfigure[Diélectrique 7]{\includegraphics[width=3in]{graph7.png} \label{fig7}}
+	}
+\end{figure}
