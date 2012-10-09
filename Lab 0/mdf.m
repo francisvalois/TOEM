@@ -55,5 +55,7 @@ function V  = mdf(m, n, er1, er2, d, w, tol)
             tolerence = false;
         end
     end
+    disp(V);
+    surf(V);
 end
 

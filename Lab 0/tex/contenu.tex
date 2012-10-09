@@ -8,6 +8,7 @@
 
 
 \label{s:experimentation}
+\chapter{Laboratoire 1}
 \section{Projet 1}
 
 L'objectif fondamental de ce laboratoire est de déterminer le potentiel électrique en chaque point d'un système qui présente les caractéristiques montrées sur la figure 1 de l'énoncé de laboratoire. 
@@ -130,6 +131,8 @@ function V  = mdf(m, n, er1, er2, d, w, tol)
             tolerence = false;
         end
     end
+    disp(V);
+    surf(V);
 end
 
 
@@ -139,11 +142,15 @@ end
 
 \textit{Un fichier nommé mda.m est disponible dans le répertoire remis sur pixel.}
 \begin{enumerate}
+\item Copier le fichia mda.m dans un répertoire connu du logiciel matlab;
 \item Ouvrir le fichier mda.m présent dans le répertoire au moyen de Matlab;
-\item Lancer le fichier;
 \item Dans l'interpréteur, fixer les paramètres d'appel de la fonction selon la même nomenclature qu'utilisée dans l'énoncé de laboratoire. Pour se faire, utiliser une syntaxe du genre: m=10; etc. 
-\item Lorsque les paramètres sont définis de la même manière que dans l'énoncé de laboratoire, entrer la ligne suivante: V  = mdf(m, n, er1, er2, d, w, tol);
+\begin{itemize}
+\item \textit{Exemple:} V = mdf(10,10, 1.10,4,3,$1*10^{(-9)}$);
+\end{itemize}
+\item Interpréter la ligne (appuyer sur entrer);
 \item Une matrice contenant le résultat devrait s'afficher dans l'interpréteur. 
+\item Un graphique 3D du potentiel en fonction de la position (x,y) devrait s'afficher.
 \end{enumerate}
 
 \subsection{Reproduction des exemples}
