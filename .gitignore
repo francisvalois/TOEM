@@ -1,0 +1,37 @@
+*.aux
+*.bbl
+*.blg
+*.dvi
+*.fdb_latexmk
+*.glg
+*.glo
+*.gls
+*.idx
+*.ilg
+*.ind
+*.ist
+*.lof
+*.log
+*.lot
+*.nav
+*.nlo
+*.out
+*.pdfsync
+*.ps
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+*.maf
+*.mtc
+*.mtc0
+
+Lab 0/.DS_Store
+
+Lab 0/fig/.DS_Store
+
+Lab 0/tex/.DS_Store
+
+.DS_Store
+
+Lab 0/rapport.pdf
