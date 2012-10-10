@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.9)  10 OCT 2012 15:26
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.9)  10 OCT 2012 16:01
 entering extended mode
 **rapport.tex
 ("C:\Users\Daniel\Documents\GitHub\TOEM\Lab 1\rapport.tex"
@@ -781,21 +781,23 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
 )
-("C:\Users\Daniel\Documents\GitHub\TOEM\Lab 1\amsfonts.sty"
-Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
-\symAMSa=\mathgroup4
-\symAMSb=\mathgroup5
-LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
-)
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\latex\siunits\SIunits.sty
+Package: SIunits 2007/12/02 v1.36 Support for the International System of units
+ (MH)
+
+
+\@qskwidth=\skip56
+LaTeX Font Info:    Redeclaring font encoding TS1 on input line 46.
+\symgreek=\mathgroup4
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\latex\siunits\SIunits.cfg))
 (C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\latex\subfigure\subfigure.sty
 Package: subfigure 2002/07/30 v2.1.4 subfigure package
-\subfigtopskip=\skip56
-\subfigcapskip=\skip57
+\subfigtopskip=\skip57
+\subfigcapskip=\skip58
 \subfigcaptopadj=\dimen143
-\subfigbottomskip=\skip58
+\subfigbottomskip=\skip59
 \subfigcapmargin=\dimen144
-\subfiglabelskip=\skip59
+\subfiglabelskip=\skip60
 \c@subfigure=\count125
 \c@lofdepth=\count126
 \c@subtable=\count127
@@ -805,12 +807,12 @@ Package: subfigure 2002/07/30 v2.1.4 subfigure package
 * Local config file subfigure.cfg used *
 ****************************************
 (C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\latex\subfigure\subfigure.cfg)
-\subfig@top=\skip60
-\subfig@bottom=\skip61
+\subfig@top=\skip61
+\subfig@bottom=\skip62
 )
-Package hyperref Info: Option `plainpages' set `false' on input line 126.
-Package hyperref Info: Option `breaklinks' set `false' on input line 126.
-Package hyperref Info: Option `colorlinks' set `true' on input line 126.
+Package hyperref Info: Option `plainpages' set `false' on input line 124.
+Package hyperref Info: Option `breaklinks' set `false' on input line 124.
+Package hyperref Info: Option `colorlinks' set `true' on input line 124.
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
@@ -824,10 +826,10 @@ Package: numprint 2008/02/17 v1.38 Print numbers (HH)
 \c@nprt@mantissa@digitsafter=\count130
 \c@nprt@exponent@digitsbefore=\count131
 \c@nprt@exponent@digitsafter=\count132
-\nprt@digitwidth=\skip62
-\nprt@sepwidth=\skip63
-\nprt@decimalwidth=\skip64
-\nprt@blockwidth=\skip65
+\nprt@digitwidth=\skip63
+\nprt@sepwidth=\skip64
+\nprt@decimalwidth=\skip65
+\nprt@blockwidth=\skip66
 \nprt@digittoks=\toks28
 \nprt@pretoks=\toks29
 \nprt@posttoks=\toks30
@@ -872,12 +874,12 @@ Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Bcount=\count140
 \calc@Adimen=\dimen153
 \calc@Bdimen=\dimen154
-\calc@Askip=\skip66
-\calc@Bskip=\skip67
+\calc@Askip=\skip67
+\calc@Bskip=\skip68
 LaTeX Info: Redefining \setlength on input line 76.
 LaTeX Info: Redefining \addtolength on input line 77.
 \calc@Ccount=\count141
-\calc@Cskip=\skip68
+\calc@Cskip=\skip69
 )
 (C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\latex\eso-pic\eso-pic.sty
 Package: eso-pic 2010/10/06 v2.0c eso-pic (RN)
@@ -890,333 +892,27 @@ File: pppdftex.def 2012/08/31 v0.4t Pdfpages driver for pdfTeX (AM)
 \c@AM@survey=\count142
 \AM@templatesizebox=\box36
 )
-("C:\Users\Daniel\Documents\GitHub\TOEM\Lab 1\mcode.sty"
--- Package: `mcode' 2.3 <2012/08/31> --
-Package: mcode 2012/08/31 2.3
- - settings optimized for display (colour formating)
- - line numbering enabled
- - literate programming (character replacements) enabled
- - automatic line breaking enabled (careful, buggy!)
- - framed listings
-(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
-\lst@mode=\count143
-\lst@gtempboxa=\box37
-\lst@token=\toks33
-\lst@length=\count144
-\lst@currlwidth=\dimen155
-\lst@column=\count145
-\lst@pos=\count146
-\lst@lostspace=\dimen156
-\lst@width=\dimen157
-\lst@newlines=\count147
-\lst@lineno=\count148
-\lst@maxwidth=\dimen158
 
-(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
-File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
-\c@lstnumber=\count149
-\lst@skipnumbers=\count150
-\lst@framebox=\box38
-)
-(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg
-File: listings.cfg 2007/02/22 1.4 listings configuration
-))
-Package: listings 2007/02/22 1.4 (Carsten Heinz)
-\lbreakdots=\box39
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 220.
+! LaTeX Error: File `mcode.sty' not found.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-))
-("C:\Users\Daniel\Documents\GitHub\TOEM\Lab 1\rapport.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 69.
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
-File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 69.
+Enter file name: 
+! Emergency stop.
+<read *> 
+         
+l.36 \def
+         \dbar{{\mathchar'26\mkern-12mu d}}
+*** (cannot \read from terminal in nonstop modes)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
-File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-*geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
-*geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
-* paper: letterpaper
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* hratio: 1:1
-* vratio: 1:1
-* modes: includehead heightrounded 
-* h-part:(L,W,R)=(71.13188pt, 472.03123pt, 71.13188pt)
-* v-part:(T,H,B)=(71.13188pt, 652.70622pt, 71.13188pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
-* \textwidth=472.03123pt
-* \textheight=621.0pt
-* \oddsidemargin=-1.1381pt
-* \evensidemargin=-1.1381pt
-* \topmargin=-1.1381pt
-* \headheight=12.0pt
-* \headsep=25.0pt
-* \topskip=12.0pt
-* \footskip=30.0pt
-* \marginparwidth=44.0pt
-* \marginparsep=10.0pt
-* \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-LaTeX Info: Redefining \degres on input line 69.
-LaTeX Info: Redefining \dots on input line 69.
-LaTeX Info: Redefining \up on input line 69.
-Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: hyperref package is loaded.
-Package caption Info: listings package is loaded.
-Package caption Info: longtable package is loaded.
-(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\ltcaption.sty
-Package: ltcaption 2011/09/12 v1.3 longtable captions (AR)
-)
-Package caption Info: rotating package is loaded.
-Package caption Info: subfigure package is loaded.
-Package caption Info: End \AtBeginDocument code.
-
-(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count151
-\scratchdimen=\dimen159
-\scratchbox=\box40
-\nofMPsegments=\count152
-\nofMParguments=\count153
-\everyMPshowfont=\toks34
-\MPscratchCnt=\count154
-\MPscratchDim=\dimen160
-\MPnumerator=\count155
-\makeMPintoPDFobject=\count156
-\everyMPtoPDFconversion=\toks35
-)
-\AtBeginShipoutBox=\box41
-Package hyperref Info: Link coloring ON on input line 69.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
-Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
-Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
-)
-\c@section@level=\count157
-)
-LaTeX Info: Redefining \ref on input line 69.
-LaTeX Info: Redefining \pageref on input line 69.
-LaTeX Info: Redefining \nameref on input line 69.
-
-("C:\Users\Daniel\Documents\GitHub\TOEM\Lab 1\rapport.out")
-("C:\Users\Daniel\Documents\GitHub\TOEM\Lab 1\rapport.out")
-\@outlinefile=\write3
-
-<./fig/ul_logo.pdf, id=19, 313.17pt x 129.48375pt>
-File: ./fig/ul_logo.pdf Graphic file (type pdf)
- <use ./fig/ul_logo.pdf>
-Package pdftex.def Info: ./fig/ul_logo.pdf used on input line 69.
-(pdftex.def)             Requested size: 140.99799pt x 58.29875pt.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 69.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
-File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 69.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
-File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 69.
-
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
-File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 69.
-
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
-File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 69.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 69.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 69.
-LaTeX Font Info:    Try loading font information for U+msa on input line 69.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
-File: umsa.fd 2009/06/22 v3.00 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 69.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
-File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-) [999
-
-{C:/Users/Daniel/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/D
-aniel/Documents/GitHub/TOEM/Lab 1/fig/ul_logo.pdf>]
-ABD: EveryShipout initializing macros
-\c@lstlisting=\count158
-
-("C:\Users\Daniel\Documents\GitHub\TOEM\Lab 1\tex/contenu.tex"
-Chapitre 1.
-[1
-
-
-
-]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 47.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 47.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 47.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 47.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 47.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 51.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\epsilon' on input line 51.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 51.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 51.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 51.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 58.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\epsilon' on input line 58.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 58.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 58.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 68.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 68.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 68.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 68.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 68.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 68.
-
-)
-
-Package caption Warning: Unused \captionsetup[table] on input line 158.
-See the caption package documentation for explanation.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 80.
-[2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 80.
- ("C:\Users\Daniel\Documents\GitHub\TOEM\Lab 1\rapport.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 80.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 80.
-
-
-Package rerunfilecheck Warning: File `rapport.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `rapport.out':
-(rerunfilecheck)             Before: 104B6908D567FED530D4E69B00307D65;281
-(rerunfilecheck)             After:  2D04DDA204AEEF724560315D4339A1D4;557.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 80.
- ) 
+ 
 Here is how much of TeX's memory you used:
- 11633 strings out of 494045
- 173137 string characters out of 3145967
- 274641 words of memory out of 3000000
- 14678 multiletter control sequences out of 15000+200000
- 60967 words of font info for 59 fonts, out of 3000000 for 9000
+ 9872 strings out of 494045
+ 145064 string characters out of 3145967
+ 252561 words of memory out of 3000000
+ 13033 multiletter control sequences out of 15000+200000
+ 4702 words of font info for 16 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 43i,10n,42p,740b,414s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x86)/
-MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files (x86)/MiKTeX 2.9/font
-s/enc/dvips/lm/lm-mathex.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips
-/lm/lm-mathsy.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx
-12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/
-Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi12.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/lm/lmmi6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
-ts/type1/public/lm/lmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
-lic/lm/lmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr10
-.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files (x
-86)/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/public/lm/lmro12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
-ype1/public/lm/lmsy10.pfb>
-Output written on rapport.pdf (3 pages, 212556 bytes).
-PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
- 19 named destinations out of 1000 (max. 500000)
- 38 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 43i,0n,40p,260b,43s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!
