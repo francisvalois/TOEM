@@ -17,7 +17,7 @@ L'objectif fondamental de ce laboratoire est de réaliser un programme informati
 On cherche à identifier les concepts de base théoriques utiles à ce laboratoire, soit :
 
 \begin{itemize}
-\item la version numérique de l'intégrale de Gauss nécessaire pour obtenir les capacitances $C$ et $C_0$;
+\item la version numérique de l'intégrale de Gauss nécessaire pour obtenir les capacitances $\mathcal{C}$ et $\mathcal{C}_0$;
 \item l'obtention de $Z_0$ et $v_p$ en mode quasi-TEM.
 \end{itemize}
 
@@ -44,7 +44,7 @@ En combiant les deux expression précédentes, on obtient :
 On note tout de suite que tout dépendant de l'orientation des surgaces respectives, l'intégrale deviendra rapidement infaisible à la main, dumoins dans un laps de temps court. Il va de soit qu'il est possible d'exprimer ce calcul sous la forme de somme discrète (ce qui est en fait une intégrale) et qu'en minimisant les distances successives d'évaluation, on obtiendra une évaluation de plus en plus précise. On peut penser à une somme de Riemann classique, dans laquelle si on diminuait le pas entre chaque rectangle, on convergerait vers la définition de l'intégrale. En reportant ce résultat dans le cas étudié, on obtient une version discrète de l'équation \ref{eq:Q}.
 
 \subsection{Détermination de \textit{C}}
-Afin de déterminer la capacité $C$, on utilise le résultat qui nous donne une version discrète de la charge électrique de Q en chaque point. Sachant la charge électrique, il suffit de diviser par le potentiel en chaque point. Par la suite, on divise par le pas utilisé (il est intéressant de remarquer que dans le cas où il est uniforme et égal à 1, soit dans notre cas, cette étape n'affecte pas le résultat) et on obtient la capacité totale dans la géométrie étudiée.
+Afin de déterminer la capacité $\mathcal{C}$, on utilise le résultat qui nous donne une version discrète de la charge électrique de Q en chaque point. Sachant la charge électrique, il suffit de diviser par le potentiel en chaque point. Par la suite, on divise par le pas utilisé (il est intéressant de remarquer que dans le cas où il est uniforme et égal à 1, soit dans notre cas, cette étape n'affecte pas le résultat) et on obtient la capacité totale dans la géométrie étudiée.
 
 \subsection{Détermination de $\epsilon_{r_{interface}}$}
 Pour les points placés aux interfaces entre les deux diélectriques, on peut approximer la permittivité à l'interface ($\epsilon_{r_{interface}}$) par : 
@@ -57,20 +57,20 @@ Pour les points placés aux interfaces entre les deux diélectriques, on peut ap
 Dans ce laboratoire, la détermination de la capacité $C$ est faite dans la section précédente. Ce faisant, on peut utiliser le résultat précédent et la relation suivante:
 
 \begin{equation}
-	\epsilon_{r_{eff}} = \frac{C}{C_0}
+	\epsilon_{r_{eff}} = \frac{\mathcal{C}}{\mathcal{C}_0}
 \end{equation}
 
-Connaissant $C$ et $C_0$, trouver $\epsilon_{r_{eff}}$ devient trivial.
+Connaissant $\mathcal{C}$ et $\mathcal{C}_0$, trouver $\epsilon_{r_{eff}}$ devient trivial.
 
 \subsection{Détermination de $Z_0$ et de $v_p$}
-Comme on connait $C$ et $C_0$ des étapes précédentes, il suffit d'appliquer les relations suivantes pour trouver les deux paramètres demandés : 
+Comme on connait $\mathcal{C}$ et $\mathcal{C}_0$ des étapes précédentes, il suffit d'appliquer les relations suivantes pour trouver les deux paramètres demandés : 
 
 \begin{equation}
-	V_p \approx c\sqrt{\frac{C_0}{C}}
+	V_p \approx c\sqrt{\frac{\mathcal{C}_0}{\mathcal{C}}}
 \end{equation}
 
 \begin{equation}
-	Z_0 \approx \frac{1}{c\sqrt{C_0C}}
+	Z_0 \approx \frac{1}{c\sqrt{\mathcal{C}_0\mathcal{C}}}
 \end{equation}
 
 
@@ -189,13 +189,13 @@ En utilisant cette matrice dans la fonction IGauss ainsi que les paramètres sui
 nous donnes la capacité suivante :
 
 \begin{equation}
-	C_0 \approx 3.81549044906185e-11 [F/m]
+	C_0 \approx 38.1549044906185 [pF/m]
 \end{equation}
 
 Cette valeur est très proche de la valeur fournie qui est la suivante :
 
 \begin{equation}
-	C_{0_{prof}} \approx 3.815571464671e-11 [F/m]
+	C_{0_{prof}} \approx 38.15571464671 [pF/m]
 \end{equation}
 
 La différence entre les deux valeurs est de moins de 0.002\% ce qui semble est un taux d'erreur très acceptable.
@@ -224,13 +224,13 @@ En utilisant cette matrice dans la fonction IGauss ainsi que les paramètres sui
 nous donnes la capacité suivante :
 
 \begin{equation}
-	C_0 \approx 2.27651093653445e-10 [F/m]
+	C_0 \approx 227.651093653445[pF/m]
 \end{equation}
 
 Cette valeur est très proche de la valeur fournie qui est la suivante :
 
 \begin{equation}
-	C_{0_{prof}} \approx 2.276559274467e-10 [F/m]
+	C_{0_{prof}} \approx 227.6559274467 [pF/m]
 \end{equation}
 
 Encore une fois, la différence entre les deux valeurs est de moins de 0.002\% ce qui tend a prouver que la fonction fait bien ce qui lui est demandé.

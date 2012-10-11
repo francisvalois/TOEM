@@ -109,7 +109,8 @@
 \RequirePackage{hyperref}
 \RequirePackage{multirow}
 \RequirePackage{amsmath}
-\RequirePackage{SIunits}
+%\RequirePackage{SIunits}
+\RequirePackage{amsfonts}
 \RequirePackage{subfigure}
 
 %--------------------------------------------------------------------------------------
