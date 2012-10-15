@@ -1,19 +1,11 @@
 function V  = mdf(m, n, er1, er2, d, w, tol)
     
     %Creation des matrices et des variables
+    n_iter = 0;
     V = zeros(n+1, m+1);
-    permitivityMatrix = zeros(n+1, m+1);
     oldMatrix = zeros(n+1, m+1);
     tolerence = false;
     inte = 1;
-    %Remplissage des permitivites
-    if d == 0; 
-        permitivityMatrix(2:n, 2:m) = er2;
-    else
-        permitivityMatrix(2:n-d, 2:m) = er2;
-        permitivityMatrix(n+1-d:n, 2:m) = er1;
-    end
-    
     %Position du conducteur, de la permitivite du conducteur et du potentiel
     halfW = floor((w+1)/2);
     if mod(m+1,2) == 0
@@ -24,7 +16,8 @@ function V  = mdf(m, n, er1, er2, d, w, tol)
     V(n+1-d, halfM+1-halfW:halfM+w+1-halfW) = 1;
     
     %Calcul du potentiel de chaque point
-    while tolerence == false,
+    while tolerence == false && n_iter <= 5000,
+        n_iter = n_iter + 1;
         for i=2:n,
             for j=2:m,
                 %Calcul du potentiel du point avec sauvegarde de l'ancienne
@@ -38,8 +31,8 @@ function V  = mdf(m, n, er1, er2, d, w, tol)
                 %Sur la ligne de separation du dielectrique
                 elseif (i == n+1-d)
                     V(i,j) = (V(i,j-1) + V(i,j+1))/4 + ...
-                    (permitivityMatrix(i+1,j) * V(i+1,j) + ...
-                    permitivityMatrix(i-1,j) * V(i-1,j))/(2*(er2+er1));
+                    (er2*V(i+1,j) + ...
+                    er1*V(i-1,j))/(2*(er2+er1));
                 %Sur le reste
                 else
                     V(i,j) = (V(i,j-1) + V(i,j+1) + V(i+1,j) + V(i-1,j))/4;
@@ -51,8 +44,6 @@ function V  = mdf(m, n, er1, er2, d, w, tol)
         %et extraction de la valeur maximale
         if(max(abs(oldMatrix - V)) < tol)
             tolerence = true;
-        else
-            tolerence = false;
         end
     end
     display(inte);
