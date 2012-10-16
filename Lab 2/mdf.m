@@ -5,7 +5,6 @@ function V  = mdf(m, n, er1, er2, d, w, tol)
     V = zeros(n+1, m+1);
     oldMatrix = zeros(n+1, m+1);
     tolerence = false;
-    inte = 1;
     %Position du conducteur, de la permitivite du conducteur et du potentiel
     halfW = floor((w+1)/2);
     if mod(m+1,2) == 0
@@ -46,6 +45,5 @@ function V  = mdf(m, n, er1, er2, d, w, tol)
             tolerence = true;
         end
     end
-    display(inte);
 end
 
