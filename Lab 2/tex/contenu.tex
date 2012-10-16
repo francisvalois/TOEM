@@ -25,7 +25,7 @@ On cherche à identifier les concepts de base théoriques utiles à ce laboratoi
 Les équations de Maxwell permettent, à partir d'une distribution de potentiel qui possède une géométrie simple et d'une distribution d'un champ électrique associé ($\bar{E}$), de déterminer la charge emmagasinée dans une distribution donnée. On observe que le champ électrique d'une distribution est lié au potentiel électrique de la manière suivante :
 
 \begin{equation}
-	\vec{E}(x,y) = - \Delta V(x,y)
+	\vec{E}(x,y) = - \nabla V(x,y)
 \end{equation}
 
 Aussi, on sait que la charge électrique dans un milieu donné s'exprime comme : 
@@ -38,7 +38,7 @@ En combiant les deux expression précédentes, on obtient :
 
 \begin{equation}
 	\label{eq:Q}
-	Q = \oint_S \! -\epsilon \Delta V(x,y) \, \mathrm{d}S
+	Q = \oint_S \! -\epsilon \nabla V(x,y) \, \mathrm{d}S
 \end{equation}
 
 On note tout de suite que tout dépendant de l'orientation des surgaces respectives, l'intégrale deviendra rapidement infaisible à la main, dumoins dans un laps de temps court. Il va de soit qu'il est possible d'exprimer ce calcul sous la forme de somme discrète (ce qui est en fait une intégrale) et qu'en minimisant les distances successives d'évaluation, on obtiendra une évaluation de plus en plus précise. On peut penser à une somme de Riemann classique, dans laquelle si on diminuait le pas entre chaque rectangle, on convergerait vers la définition de l'intégrale. En reportant ce résultat dans le cas étudié, on obtient une version discrète de l'équation \ref{eq:Q}.
@@ -76,8 +76,7 @@ Comme on connait $\mathcal{C}$ et $\mathcal{C}_0$ des étapes précédentes, il 
 
 \newpage
 \section{Projet 2}
-Il est important de noter que dans un soucis de lisibilité, le code Matlab de la fonction MDF n'est pas reporté dans le présent rapport. Celui-ci est toutefois disponible dans le rapport du laboratoire 1.
-
+\textit{Afin d'alléger la présentation du rapport, l'algorithme en Matlab de la fonction MDF ne sera pas présenté.}
 \subsection{Algorithme}
 \subsubsection{Fonction IGauss}
 
@@ -156,9 +155,9 @@ end
 \textit{Les fichiers nommés mdf.m, IGauss.m et MicroPar.m sont disponibles dans le répertoire remis sur pixel.}
 \begin{enumerate}
 \item Copier les fichiers dans un répertoire connu du logiciel Matlab;
-\item Dans l'interpréteur, fixer les paramètres d'appel de la fonction selon la même nomenclature qu'utilisée dans l'énoncé de laboratoire. Pour se faire, utiliser une syntaxe du genre: m=10; etc. 
+\item Dans l'interpréteur, fixer les paramètres d'appel de la fonction selon la même nomenclature qu'utilisée dans l'énoncé de laboratoire. Pour se faire, utiliser une syntaxe du genre: m=10; n =6; d=2; w=4 etc. 
 \begin{itemize}
-\item \textit{Exemple:} [Z0, vp] = MicroPar(10,10, 1.10,4,3,$1*10^{(-9)}$);
+\item \textit{Exemple d'appel de la fonction MicroPar:} [Z0, vp] = MicroPar(10,10, 1.10,4,3,$1*10^{(-9)}$);
 \end{itemize}
 \item Interpréter la ligne (appuyer sur entrer);
 \item Le "workspace" de Matlab devrait contenir les deux réponses voulues.
@@ -186,19 +185,19 @@ En utilisant cette matrice dans la fonction IGauss ainsi que les paramètres sui
 \item $\omega$ = 2;
 \item d = 2.
 \end{itemize}
-nous donnes la capacité suivante :
+On obtient la capacité suivante :
 
 \begin{equation}
 	C_0 \approx 38.1549044906185 [pF/m]
 \end{equation}
 
-Cette valeur est très proche de la valeur fournie qui est la suivante :
+Cette valeur est proche de la valeur fournie qui est la suivante :
 
 \begin{equation}
 	C_{0_{prof}} \approx 38.15571464671 [pF/m]
 \end{equation}
 
-La différence entre les deux valeurs est de moins de 0.002\% ce qui semble est un taux d'erreur très acceptable.
+La différence entre les deux valeurs est de moins de 0.002\% et correspond à un taux d'erreur relatif faible.
 \subsection{Exemple 7.6}
 La matrice obtenu avec un seuil de tolérence de $10^{-9}$ par notre programme est la suivante : 
 
@@ -221,21 +220,21 @@ En utilisant cette matrice dans la fonction IGauss ainsi que les paramètres sui
 \item $\omega$ = 2;
 \item d = 2.
 \end{itemize}
-nous donnes la capacité suivante :
+On obtient la capacité suivante :
 
 \begin{equation}
 	C_0 \approx 227.651093653445[pF/m]
 \end{equation}
 
-Cette valeur est très proche de la valeur fournie qui est la suivante :
+Cette valeur est proche de la valeur fournie qui est la suivante :
 
 \begin{equation}
 	C_{0_{prof}} \approx 227.6559274467 [pF/m]
 \end{equation}
 
-Encore une fois, la différence entre les deux valeurs est de moins de 0.002\% ce qui tend a prouver que la fonction fait bien ce qui lui est demandé.
+Encore une fois, la différence entre les deux valeurs est de moins de 0.002\% ce qui prouve que la fonction produit les résultats escomptés dans une marge de tolérance de 0.002\%. 
 
-\section{Projet 4:  selon la géométrie et les diélectriques}
+\section{Projet 4: Résultats obtenus selon la géométrie et les diélectriques}
 
 Les figures obtenues pour les exemples demandés sont présentées à la figure \ref{fig_marde}.Les figures obtenues pour l'exemple supplémentaire demandé sont présentées à la figure \ref{mangedlamarde}.
 
