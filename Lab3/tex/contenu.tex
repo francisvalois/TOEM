@@ -100,6 +100,48 @@ V^{+}(s) &=  \frac{Z_0}{Z_0 + R_g} V_g (s)\\
 
 \newpage
 \section{Projet 3: Reproduction des exemples}
+On identifie graphiquement une forme de courbe $R-L$ série.  Le $V^{+}$  est de 14V et le 2$V^{+}$ d'environ 27V.
+\subsection*{Calcul de R}
+En identifiant la valeur finale de la tension (après quelques constantes de temps), on peut déduire la valeur de R conaissant $V^{+}$  et $Z_0$. On utilise l'équation suivante:
+\begin{equation}
+V_{finale} = V^{+} \left( 1 + \frac{R - Z_0}{R + Z_0}\right)
+\end{equation}
+
+On a que $V_{finale} = 3V et Z_0 = 50 \Omega$. On développe l'équation:
+
+\begin{align*}
+V_{finale} &= V^{+} \left( 1 + \frac{R - Z_0}{R + Z_0}\right)\\
+3 &= 14 \left( 1 + \frac{R - 50}{R + 50}\right)\\
+R &= 6 \Omega
+\end{align*}
+
+\subsection*{Calcul de $\tau$}
+
+Conaissant maintenant R, on peut trouver $\tau$ au moyen d'un point dans la pente descendante de la courbe, selon l'équation suivante:
+\begin{equation}
+V_{t\leq \tau} = V^{+} \left( \left(1 + \frac{R - Z_0}{R + Z_0}\right) + \left(1 -\frac{R - Z_0}{R + Z_0}\right) e^{-t/\tau} \right)
+\end{equation}
+
+Pour $R=6 \Omega$, $Z_0 = 50 \Omega$ et $V_{t= 250ns} = 16$, on développe l'équation précédente:
+
+\begin{align*}
+16 &= 14 \left( \left(1 + \frac{6 - 50}{6 + 50}\right) + \left(1 -\frac{6 - 50}{6 + 50}\right) e^{-250 \times 10^{-9}/\tau} \right)\\
+0.5102 &= e^{-250 \times 10^{-9}/\tau}\\
+\tau   &= \frac{1}{\frac{ln(0.5102)}{-250 \times 10^{-9}}}\\
+\tau   &= 371.497\left[ns\right]
+\end{align*}
+
+\subsection*{Calcul de L}
+
+Conaissant maintenant $\tau$, on peut déterminer l'inductance L au moyen de l'équation suivante:
+\begin{equation}
+\tau = \frac{L}{R + Z_0}
+\end{equation}
+Pour $R = 6 \Omega$, $Z_0 = 50 \Omega$ et $\tau = 371.497\left[ns\right]$, on développe l'équation précédente:
+\begin{align*}
+371.497\times 10^{-9} &= \frac{L}{6 + 50}\\
+L = 20.8 \left[\mu H\right]
+\end{align*}
 \newpage
 \section{Projet 4: Résultats obtenus selon la géométrie et les diélectriques}
 
