@@ -12,7 +12,7 @@
 \section{Projet 1}
 Nous avons choisi une charge de valeur 100$\Omega$ puisque pour cette valeur, on obtient un coefficient de réflexion théorique faible. Pour affirmer cela, on utilise l'expression suivante:
 \begin{equation}
-\Gamma_g (s) = \frac{Z_g(s) - Z_0(s)}{Z_g(s) + Z_0(s)}
+\Gamma_g (s) = \frac{Z_g(s) - Z_0(s)}{Z_g(s) + Z_0(s)}\label{eq:reflex}
  \end{equation} 
 
 \paragraph{}Dans le circuit étudié, on cherche à avoir $Z_0$ (l'impédance mise en parallèle avec la source) $\approx Z_G$ (l'impédance de la ligne)
@@ -34,7 +34,7 @@ On note dans cette figure que la réflexion est bel et bien faible, mais existan
 \section{Projet 2}
 
 Dans ce projet, il était demandé de visualiser simultanément les signaux au niveau de la charge et de la source sur la ligne RG-58 de 30m. Cela fut fait pour des charges de respectivement 0 $\Omega$, 27 $\Omega$ et 50$\Omega$. Les courbes obtenues sont présentées aux figures suivantes:
-
+\subsection{Présentation des courbes obtenues expérimentalement}
 \begin{figure}[htb]
 	\centering
 \subfigure[Régime transitoire pour $R = 0 \Omega$]{\includegraphics[scale =0.3]{fig/TR0.JPG} \label{fig:transr0}}
@@ -54,9 +54,49 @@ Dans ce projet, il était demandé de visualiser simultanément les signaux au n
 		\subfigure[Front descendant du régime transitoire pour $R = 50 \Omega$]{\includegraphics[scale =0.3]{fig/TR502.JPG} \label{fig:transr502}}
 		\quad
 		\subfigure[Vue d'ensemble du régime transitoire pour $R = 50 \Omega$]{\includegraphics[scale =0.3]{fig/TR503.JPG} \label{fig:transr503}}
-		
 \end{figure}
+\newpage
+\subsection{Présentation des calculs}
+L'équation utile au calcul du coefficient de réflexion est présentée à l'équation \ref{eq:reflex}. 
+\subsubsection*{Calcul du coefficient de réflexion vu par la source}
+Le développement du calcul du coefficient de réflexion vu par la source est présenté ci-dessous:
+\begin{align}
+\Gamma_g (s) &= \frac{Z_g(s) - Z_0(s)}{Z_g(s) + Z_0(s)}\\
+		 &= \frac{50 - 50 }{50 + 50}\notag\\
+		 &= 0\notag
+\end{align}
+\subsubsection*{Calcul de la tension $V^{+}(s)$}
+On note premièrement sur la figure \ref{fig:transr501} que la tension de la source était de 27.2 V.
+\begin{align}
+V^{+}(s) &=  \frac{Z_0}{Z_0 + R_g} V_g (s)\\
+		 &=	 \frac{50}{50 + 50} 27.2 \notag\\
+		 &=  13.6V\notag
+\end{align}
 
+\subsubsection*{Calcul des coefficients de réflexion vus aux charges}
+\begin{equation}
+\Gamma_c (s) = \frac{Z_c(s) - Z_0(s)}{Z_c(s) + Z_0(s)}
+\end{equation}
+\textbf{Pour R = $0\Omega$}
+\begin{align*}
+\Gamma_c (s) &= \frac{Z_c(s) - Z_0(s)}{Z_c(s) + Z_0(s)}\\
+			 &= \frac{0 - 50 }{0 + 50}\\
+			 &= -1
+\end{align*}
+\textbf{Pour R = $27\Omega$}
+\begin{align*}
+\Gamma_c (s) &= \frac{Z_c(s) - Z_0(s)}{Z_c(s) + Z_0(s)}\\
+			 &= \frac{27 - 50 }{27 + 50}\\
+			 &= -0.2987
+\end{align*}
+\textbf{Pour R = $50\Omega$}
+\begin{align*}
+\Gamma_c (s) &= \frac{Z_c(s) - Z_0(s)}{Z_c(s) + Z_0(s)}\\
+			 &= \frac{50 - 50 }{50 + 50}\\
+			 &= 0
+\end{align*}
+
+\newpage
 \section{Projet 3: Reproduction des exemples}
 \newpage
 \section{Projet 4: Résultats obtenus selon la géométrie et les diélectriques}
