@@ -11,7 +11,7 @@
 %
 % Modele d'organisation d'un projet LaTeX 
 % rapport/      dossier racine et fichier principal
-% rapport/fig   fichiers des figures
+% rapport/fig   fichiers des figures\textbf{•}
 % rapport/tex   autres fichiers .tex
 %
 
@@ -52,7 +52,7 @@
 \newcolumntype{Z}[3]{>{#1\hspace{0pt}\arraybackslash}#2{#3}}
 
 % Definitions des parametres de la page titre
-\TitreProjet{Rapport de laboratoire 2}                         % Titre du projet
+\TitreProjet{Rapport de laboratoire 3}                         % Titre du projet
 \TitreRapport{Transmission des ondes électromagnétiques}       % Titre du rapport
 \Destinataire{M. Dominique Grenier}         % Nom(s) du destinataire
 \TableauMembres{%                                     % Tableau des membres de l'equipe
@@ -60,7 +60,7 @@
    910\,097\,879  & Francis Valois \\\hline        % matricule & nom & \\\hline
            % matricule & nom & \\\hline     % matricule & nom & \\\hline
 }
-\DateRemise{16 octobre 2012}                           % Date de remis
+\DateRemise{26 octobre 2012}                           % Date de remis
 
 
 % Corps du document
@@ -73,8 +73,8 @@
 %\input{tex/analyse}
 %\input{tex/conclusion}
 
-%\appendix
-%\input{tex/annexes}
+\appendix
+\input{tex/annexes}
 
 \end{document}
 % Fin du document
