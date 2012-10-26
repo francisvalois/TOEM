@@ -35,7 +35,7 @@ On note dans cette figure que la réflexion est bel et bien faible, mais existan
 
 \section{Projet 2}
 
-Dans ce projet, il était demandé de visualiser simultanément les signaux au niveau de la charge et de la source sur la ligne RG-58 de 30m. Cela fut fait pour des charges de respectivement 0 $\Omega$, 27 $\Omega$ et 50$\Omega$. Les courbes obtenues sont présentées aux figures suivantes:
+Dans ce projet, il était demandé de visualiser simultanément les signaux au niveau de la charge et de la source sur la ligne RG-58 de 30m. Cela fut fait pour des charges de respectivement 0 $\Omega$, 27 $\Omega$ et 50$\Omega$. Les courbes obtenues sont présentées à la section suivante.
 \subsection{Présentation des courbes obtenues expérimentalement}
 \begin{figure}[htb]
 	\centering
@@ -43,7 +43,7 @@ Dans ce projet, il était demandé de visualiser simultanément les signaux au n
 		\quad
 		\subfigure[Front montant du régime transitoire pour $R = 27 \Omega$]{\includegraphics[scale =0.3]{fig/TR272.JPG} \label{fig:transr272}}
 		\quad
-		\subfigure[Front descendant du régime transitoire pour $R = 27 \Omega$]{\includegraphics[scale =0.3]{fig/TR272.JPG} \label{fig:transr271}}
+		\subfigure[Front descendant du régime transitoire pour $R = 27 \Omega$]{\includegraphics[scale =0.3]{fig/TR271.JPG} \label{fig:transr271}}
 		\quad
 		\subfigure[Vue d'ensemble du régime transitoire pour $R = 27 \Omega$]{\includegraphics[scale =0.3]{fig/TR273.JPG} \label{fig:transr273}}
 \end{figure}
@@ -59,6 +59,7 @@ Dans ce projet, il était demandé de visualiser simultanément les signaux au n
 \end{figure}
 \newpage
 \subsection{Présentation des calculs}
+Un example de chacun des calculs demandés est présenté ci-dessous.
 L'équation utile au calcul du coefficient de réflexion est présentée à l'équation \ref{eq:reflex}. 
 \subsubsection*{Calcul du coefficient de réflexion vu par la source}
 Le développement du calcul du coefficient de réflexion vu par la source est présenté ci-dessous:
@@ -97,9 +98,36 @@ V^{+}(s) &=  \frac{Z_0}{Z_0 + R_g} V_g (s)\\
 			 &= \frac{50 - 50 }{50 + 50}\\
 			 &= 0
 \end{align*}
+\newpage
+\subsection{Présentation des courbes théoriques}
+Les courbes théoriques utiles pour l'analyse et la discussion sont présentées ci-dessous.
+\setcounter{subfigure}{0}
+\begin{figure}[htb]
+	\centering
+\subfigure[Régime transitoire théorique pour $R = 0 \Omega$]{\includegraphics[scale =0.2]{fig/r0.png} \label{fig:r0}}
+		\quad
+		\subfigure[Régime transitoire théorique pour $R = 27 \Omega$]{\includegraphics[scale =0.2]{fig/r27.png} \label{fig:r27}}
+		\quad
+		\subfigure[Régime transitoire théorique pour $R = 50 \Omega$]{\includegraphics[scale =0.2]{fig/r50.png} \label{fig:r50}}
+\end{figure}
+
 
 \newpage
-\section{Projet 3: Reproduction des exemples}
+\setcounter{subfigure}{0}
+\begin{figure}[htb]
+	\centering
+\subfigure[Diagramme en z pour $R = 0 \Omega$]{\includegraphics[scale =0.15]{fig/zr0.png} \label{fig:zr0}}
+		\quad
+		\subfigure[[Diagramme en z pour $R = 27 \Omega$]{\includegraphics[scale =0.15]{fig/zr25.png} \label{fig:zr25}}
+		\quad
+		\subfigure[[Diagramme en z pour $R = 50 \Omega$]{\includegraphics[scale =0.15]{fig/zr50.png} \label{fig:zr50}}
+\end{figure}
+\clearpage
+\newpage
+\subsection{Discussion}
+\clearpage
+\newpage
+\section{Projet 3}
 La courbe observée à l'oscilloscope est présentée à la figure \ref{CC2}. Le numéro de la charge utilisée est TOEM \#1. On identifie graphiquement une forme de courbe $R-L$ série.  Le $V^{+}$  est de 14V et le 2$V^{+}$ d'environ 27V.
 
 \begin{figure}[htb]
@@ -152,7 +180,7 @@ Pour $R = 6 \Omega$, $Z_0 = 50 \Omega$ et $\tau = 371.497\left[ns\right]$, on d�
 L = 20.8 \left[\mu H\right]
 \end{align*}
 \newpage
-\section{Projet 4: Résultats obtenus selon la géométrie et les diélectriques}
+\section{Projet 4}
 \subsubsection*{Tracé des régimes transitoires à l'oscilloscope}
 Nous avons réalisé le montage pratique tel qu'illustré à la figure 4 de l'énoncé de laboratoire. L'ordre des lignes de transmission a été respecté. Le tracé (à l'oscilloscope) des réponses transitoires obtenues pour des impédances de respectivement 0 $\Omega$, 50 $\Omega$ et 100 $\Omega$ sont présentées aux figures ci-dessous. Il est à noté que le signal vu de la source est sur le canal 1 (orange), que le signal vu à la jonction entre les deux lignes est sur le canal 2 (bleu) et que le signal vu de la charge est sur le canal 3 (vert).
 
@@ -218,3 +246,4 @@ On définit l'équation suivante et on la développe selon les valeurs connues
 			&= 1 + 0.3007\notag\\
 			&= 1.3007\notag
 \end{align}
+
