@@ -48,7 +48,7 @@ Dans ce projet, il était demandé de visualiser simultanément les signaux au n
 		\subfigure[Vue d'ensemble du régime transitoire pour $R = 27 \Omega$]{\includegraphics[scale =0.3]{fig/TR273.JPG} \label{fig:transr273}}
 \end{figure}
 
-\setcounter{subfigure}{0}
+
 \begin{figure}[htb]
 	\centering
 \subfigure[Front montant du régime transitoire pour $R = 50 \Omega$]{\includegraphics[scale =0.3]{fig/TR501.JPG} \label{fig:transr501}}
@@ -99,37 +99,36 @@ V^{+}(s) &=  \frac{Z_0}{Z_0 + R_g} V_g (s)\\
 			 &= 0
 \end{align*}
 \newpage
-\subsection{Présentation des courbes théoriques}
+\subsection{Présentation des courbes théoriques de régime transitoire}
 Les courbes théoriques utiles pour l'analyse et la discussion sont présentées ci-dessous.
-\setcounter{subfigure}{0}
+
 \begin{figure}[htb]
 	\centering
-\subfigure[Régime transitoire théorique pour $R = 0 \Omega$]{\includegraphics[scale =0.2]{fig/r0.png} \label{fig:r0}}
-		\quad
-		\subfigure[Régime transitoire théorique pour $R = 27 \Omega$]{\includegraphics[scale =0.2]{fig/r27.png} \label{fig:r27}}
-		\quad
-		\subfigure[Régime transitoire théorique pour $R = 50 \Omega$]{\includegraphics[scale =0.2]{fig/r50.png} \label{fig:r50}}
+\mbox{\subfigure[Régime transitoire théorique pour $R = 0 \Omega$]{\includegraphics[scale =0.25]{fig/r0.png} \label{fig:r0}}
+		\subfigure[Régime transitoire théorique pour $R = 27 \Omega$]{\includegraphics[scale =0.25]{fig/r27.png} \label{fig:r27}}}
+		\subfigure[Régime transitoire théorique pour $R = 50 \Omega$]{\includegraphics[scale =0.25]{fig/r50.png} \label{fig:r50}}
 \end{figure}
 
 
 \newpage
-\setcounter{subfigure}{0}
+\subsection{Présentation des diagrammes en z}
+Cette section présente les diagrammes en z qui ont été réalisés au moyen du logiciel matlab et du programme disponible sur le site web du cours.
 \begin{figure}[htb]
 	\centering
-\subfigure[Diagramme en z pour $R = 0 \Omega$]{\includegraphics[scale =0.15]{fig/zr0.png} \label{fig:zr0}}
-		\quad
-		\subfigure[[Diagramme en z pour $R = 27 \Omega$]{\includegraphics[scale =0.15]{fig/zr25.png} \label{fig:zr25}}
-		\quad
-		\subfigure[[Diagramme en z pour $R = 50 \Omega$]{\includegraphics[scale =0.15]{fig/zr50.png} \label{fig:zr50}}
+\mbox{\subfigure[Diagramme en z pour $R = 0 \Omega$]{\includegraphics[scale =0.215]{fig/zr0.png} \label{fig:zr0}}
+		\subfigure[[Diagramme en z pour $R = 27 \Omega$]{\includegraphics[scale =0.215]{fig/zr25.png} \label{fig:zr25}}}
+		\subfigure[[Diagramme en z pour $R = 50 \Omega$]{\includegraphics[scale =0.215]{fig/zr50.png} \label{fig:zr50}}
 \end{figure}
 \clearpage
 \newpage
 \subsection{Discussion}
-Il est important de noter que les courbes physiques ne sont pas des échelons parfaits dus aux limites de production de la source, des limites d'analyse de l'oscilloscope ainsi que des différentes charges complexe présentes dans le montage. C'est pourquoi ces différences sont ignorées et les courbes sont vues comme étant un échelon parfait pour permettre une comparaison simple avec la théorie qui n'en tient pas compte.
+Nous faisons premièrement le constat que les signaux prduits par le générateur ne sont pas idéaux et qu'ils peuvent biaiser la forme des courbes. La bande passante limitée de l'oscilloscope amène des contraintes quant à la visualtion de signaux avec des transitions brusques comme les échelons. Nous pouvons aussi noter la présence d'impédances complexes parasites présentes sur la ligne qui peut modifier la forme des courbes obtenues. Les courbes seront analysées selon la théorie en négligeant ces détails plus techniques.
 
-\paragraph{} La figure \ref{fig:transr0} représente le régime transitoire pour R = 0 $\Omega$ que nous avons mesuré au laboratoire. Lorsque nous comparons avec la figure théorique \ref{fig:r0}, nous remarquons tout de suite la similitude entre les deux courbes. Le signal à la source est atténué complètement après un certain temps. Ceci est causé par la réflexion du signal qui est inversé lorsqu'elle revient. La courbe en Z théorique pour une résistance de 0 Ohm (figure \ref{fig:zr0}) montre bien cet effet. À Z = 0, l'échelon va rencontrer la première droite de 27.2 V au t = 0 ce qui va créer le front montant et par la suite, celui-ci va rencontrer la droite -27.2 V à t = 2T ce qui va créer le front descendant. Le signal vu à la charge peut être analysé de la même façon. Le pic est causé par le signal qui rencontre la droite de 27.2 V à environ Z = 30 et t = T et rencontre la droite de -27.2 V quelques nanosecondes plus tard. Ce pic est bien présent dans les deux figures ce qui valide le modèle utilisé. De plus, selon le calcul de la section 1.2.2, le coefficient de réflexion est de -1 ce qui prouve la forme des courbes obtenues.
+\paragraph{} La figure \ref{fig:transr0} représente le régime transitoire pour R = 0 $\Omega$ que nous avons mesuré au laboratoire. Lorsque nous comparons avec la figure théorique \ref{fig:r0}, nous remarquons tout de suite la similitude entre les deux courbes. Le signal à la source est complètement atténué après un certain temps. Ceci est causé par le signal réfléchi qui est en opposition de signe avec le signal initial. La courbe en Z théorique pour une résistance de 0 $\Omega$ (figure \ref{fig:zr0}) présente ce comportement. À Z = 0, l'échelon va rencontrer la première droite de 27.2 V au temps t = 0 et crée le front montant. Par la suite, il rencontre la droite de -27.2 V à t = 2T et crée le front descendant. 
 
-\paragraph{} En utilisant la même méthode que précédemment, il est possible de valider la concordance de la théorie avec la pratique. Selon la courbe en Z théorique pour une résistance de 27 $\Omega$ (figure \ref{fig:zr25}), les courbes vont posséder la même allure que pour R = 0 mais avec des valeurs différentes. Pour la courbe vue de la source, il doit y avoir un échelon de 27.2 V à t = 0 et un échelon de -9 V à t = 2T tandis que pour la courbe vue de la charge, il doit y avoir un échelon d'environ 18 V à t = T. C'est bien ce qui a été obtenu au laboratoire comme il est montré à la figure \ref{fig:transr272}. De plus, il est possible de voir que le régime statique du signal se situe bien à environ 19 V comme le prévoit le coefficient de réflexion de -0.2987. En ce qui concerne le régime transitoire théorique (figure \ref{fig:r27}), celle-ci possèderait les mêmes caractéristiques que la courbe pratique si ce n'était pas du pic à t = T. Ce pic peut-être expliqué par le choix d'afficher la courbe à Z = 29.999 au lieu de 30, car le programme était incapable d'afficher une courbe pour une telle valeur. Comme l'affichage se sert de la courbe en Z, l'échelon passe par la courbe 27.2 à t = T et passe par la courbe de -9 V quelque nanosecondes plus tard comme précédemment.
+\paragraph{}Le signal vu à la charge peut être analysé de la même façon. Le pic est causé par le signal qui rencontre la droite de 27.2 V à environ Z = 30 et t = T et rencontre la droite de -27.2 V quelques nanosecondes plus tard. Ce pic est bien présent dans les deux figures ce qui valide le modèle utilisé. De plus, selon le calcul de la section 1.2.2, le coefficient de réflexion est de -1 ce qui explique la forme des courbes obtenues.
+
+\paragraph{} En utilisant la même méthode que précédemment, il est possible de valider la concordance de la théorie avec la pratique. La courbe en Z théorique pour une résistance de 27 $\Omega$ (figure \ref{fig:zr25}),a la même allure que la courbe pour une résistance de $0\Omega$ mais avec des valeurs d'amplitudes de signaux réfléchis différentes. Pour la courbe vue de la source, il doit y avoir un échelon de 27.2 V à t = 0 et un échelon de -9 V à t = 2T tandis que pour la courbe vue de la charge, il doit y avoir un échelon d'environ 18 V à t = T. C'est bien ce qui a été obtenu au laboratoire comme il est montré à la figure \ref{fig:transr272}. De plus, il est possible de voir que le régime statique du signal se situe bien à environ 19 V comme le prévoit le coefficient de réflexion de -0.2987. En ce qui concerne le régime transitoire théorique (figure \ref{fig:r27}), celle-ci possèderait les mêmes caractéristiques que la courbe pratique si ce n'était pas du pic à t = T. Ce pic peut-être expliqué par le choix d'afficher la courbe à Z = 29.999 au lieu de 30, car le programme était incapable d'afficher une courbe pour une telle valeur. Comme l'affichage se sert de la courbe en Z, l'échelon passe par la courbe 27.2 à t = T et passe par la courbe de -9 V quelque nanosecondes plus tard comme précédemment.
 
 \paragraph{} Théoriquement, le coefficient de réflexion lorsque la ligne RG-58 est compensée par sa résistance intrinsèque doit être de 0. Le régime transitoire pour une résistance de cet ordre est présenté à la figure \ref{fig:transr501}. En analysant cette figure, il est possible de voir que le coefficient est très proche de 0, car il n'y aucune contribution positive ou négative due à une réflexion du signal. Le délai entre les deux signaux est bien présent comme prévu par la courbe en Z présenté à la figure \ref{fig:zr50}. Tout ce que nous avons sur cette courbe est la droite de 27.2 qui va créer un délai dans le signal. De plus, il n'y a pas de différence entre la figure théorique (\ref{fig:r27}) et la figure expérimentale.
 
@@ -301,7 +300,8 @@ Les figures \ref{fig:trans2r0}, \ref{fig:trans2r50} et \ref{fig:trans2r100} pré
 \subsubsection{Diagrammes en z}
 
 Les figures \ref{fig:2zr0}, \ref{fig:2zr50} et \ref{fig:2zr100} présentent le diagramme en z pour différentes résistances placées en fin de ligne. On note que le minimum de réflexion est atteint pour une résistance de $100\Omega$. La résistance de $0\Omega$ présente le nombre le plus élevé de réflexions, ce qui était prédit par les calculs et la théorie vue au cours. La résistance de $50\Omega$ fournit un indice de réflexion mitoyen entre les deux valeurs extrêmes de résistance. Le nombre de réflexion est plus faible que celui avec une résistance de $0\Omega$, mais plus élevé que celui avec une résistance de $100\Omega$. 
-
+\clearpage
+\newpage
 \section{Conclusion}
 
 Les projets 1 à 4 témoignent de la véracité du modèle étudié. Les similitudes entre la théorie et l'expérimentation montrent que le modèle étudié est suffisant pour prédire le comportement expérimental des réflexions dans une ligne de transmission avec une ou plusieurs jonctions. Nous avons pu faire l'analyse transitoire des signaux pour différentes valeurs de résistance de charge et ainsi, vérifier les équations entourant les coefficients de réflexions ainsi que le modèle expérimental.  Nous avons montré qu'il est possible d'identifier les différents paramètres d'une charge réactive en bout de ligne au moyen du projet 3. Aussi, lors du dernier projet, il fut possible de vérifier l'impact de l'ajout d'une jonction sur la forme des signaux à la source et aux différentes jonctions. De ce fait, il fut possible d'en tracer les diagrammes en z ainsi que les diagrammes théoriques associés, de manière à mieux saisir le comportement observé. L'ensemble du laboratoire nous a permis de nous familiarisé avec la théorie et d'en comprendre les implications pratiques. 
