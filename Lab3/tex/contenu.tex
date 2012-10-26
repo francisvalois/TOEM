@@ -153,5 +153,68 @@ L = 20.8 \left[\mu H\right]
 \end{align*}
 \newpage
 \section{Projet 4: Résultats obtenus selon la géométrie et les diélectriques}
+\subsubsection*{Tracé des régimes transitoires à l'oscilloscope}
+Nous avons réalisé le montage pratique tel qu'illustré à la figure 4 de l'énoncé de laboratoire. L'ordre des lignes de transmission a été respecté. Le tracé (à l'oscilloscope) des réponses transitoires obtenues pour des impédances de respectivement 0 $\Omega$, 50 $\Omega$ et 100 $\Omega$ sont présentées aux figures ci-dessous. Il est à noté que le signal vu de la source est sur le canal 1 (orange), que le signal vu à la jonction entre les deux lignes est sur le canal 2 (bleu) et que le signal vu de la charge est sur le canal 3 (vert).
 
-
+\begin{figure}[htb]
+	\centering
+\subfigure[Régime transitoire vu de la source, à la jonction entre les lignes et à la charge pour $R = 0 \Omega$]{\includegraphics[scale =0.3]{fig/2CRC.JPG} \label{fig:trans2r0}}
+		\quad
+		\subfigure[Régime transitoire vu de la source, à la jonction entre les lignes et à la charge pour $R = 50 \Omega$]{\includegraphics[scale =0.3]{fig/2CR50.JPG} \label{fig:trans2r50}}
+		\quad
+		\subfigure[Régime transitoire vu de la source, à la jonction entre les lignes et à la charge pour $R = 100 \Omega$]{\includegraphics[scale =0.3]{fig/2CR100.JPG} \label{fig:trans2r100}}
+\end{figure}
+\newpage
+\subsubsection*{Calcul du coefficient de réflexion à la source}
+Pour calculer le coefficient de réflexion à la source, on utilise l'équation \ref{eq:reflex} en sachant qu'elle sera la même peu importe la charge:
+\begin{align*}
+\Gamma_g (s) &= \frac{50 - 50}{50 + 50}\\
+&= 0
+\end{align*}
+\subsubsection*{Calcul du coefficient de réflexion du côté de la ligne \# 1}
+On définit l'équation suivante et on la développe selon les valeurs connues
+\begin{align}
+\Gamma_{11} &= \frac{Z_{02} - Z_{01}}{Z_{02} + Z_{01}}\\
+			&= \frac{93-50}{93 + 50}\notag\\
+			&= 0.3007\notag
+\end{align}
+\subsubsection*{Calcul du coefficient de réflexion du côté de la ligne \# 2}
+On définit l'équation suivante et on la développe selon les valeurs connues
+\begin{align}
+\Gamma_{22} &= \frac{Z_{01} - Z_{02}}{Z_{01} + Z_{02}}\\
+			&= \frac{50-93}{93 + 50}\notag\\
+			&= -0.3007\notag
+\end{align}
+\subsubsection*{Calcul des coefficients de réflexion du côté des charges}
+\textbf{Pour R = $0\Omega$}
+\begin{align*}
+\Gamma_c (s) &= \frac{Z_c(s) - Z_0(s)}{Z_c(s) + Z_0(s)}\\
+			 &= \frac{0 - 93 }{0 + 93}\\
+			 &= -1
+\end{align*}
+\textbf{Pour R = $50\Omega$}
+\begin{align*}
+\Gamma_c (s) &= \frac{Z_c(s) - Z_0(s)}{Z_c(s) + Z_0(s)}\\
+			 &= \frac{50 - 93 }{93 + 50}\\
+			 &= -0.3007
+\end{align*}
+\textbf{Pour R = $100\Omega$}
+\begin{align*}
+\Gamma_c (s) &= \frac{Z_c(s) - Z_0(s)}{Z_c(s) + Z_0(s)}\\
+			 &= \frac{100 - 93 }{100 + 93}\\
+			 &= 0.0363
+\end{align*}
+\subsubsection*{Calcul du coefficient de transmission de la ligne \# 1 vers la ligne \# 2}
+On définit l'équation suivante et on la développe selon les valeurs connues
+\begin{align}
+\tau_{12} &= (1-\Gamma_{11})\\
+			&= 1 - 0.3007\notag\\
+			&= 0.6993\notag
+\end{align}
+\subsubsection*{Calcul du coefficient de transmission de la ligne \# 2 vers la ligne \# 1}
+On définit l'équation suivante et on la développe selon les valeurs connues
+\begin{align}
+\tau_{21} &= (1-\Gamma_{22})\\
+			&= 1 + 0.3007\notag\\
+			&= 1.3007\notag
+\end{align}
