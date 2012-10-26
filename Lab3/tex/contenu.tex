@@ -37,6 +37,7 @@ On note dans cette figure que la réflexion est bel et bien faible, mais existan
 
 Dans ce projet, il était demandé de visualiser simultanément les signaux au niveau de la charge et de la source sur la ligne RG-58 de 30m. Cela fut fait pour des charges de respectivement 0 $\Omega$, 27 $\Omega$ et 50$\Omega$. Les courbes obtenues sont présentées à la section suivante.
 \subsection{Présentation des courbes obtenues expérimentalement}
+Pour information, la signal de la source est branché à l'entrée du canal 1 (courbe orange) et le signal au niveau de la charge est branché au canal 2 (courbe mauve).
 \begin{figure}[htb]
 	\centering
 \subfigure[Régime transitoire pour $R = 0 \Omega$]{\includegraphics[scale =0.3]{fig/TR0.JPG} \label{fig:transr0}}
@@ -100,7 +101,7 @@ V^{+}(s) &=  \frac{Z_0}{Z_0 + R_g} V_g (s)\\
 \end{align*}
 \newpage
 \subsection{Présentation des courbes théoriques}
-Les courbes théoriques utiles pour l'analyse et la discussion sont présentées ci-dessous.
+Les courbes théoriques utiles pour l'analyse et la discussion sont présentées ci-dessous. La courbe au niveau de la source est celle de couleur verte et la courbe au niveau de la charge est celle de couleur rouge.
 \setcounter{subfigure}{0}
 \begin{figure}[htb]
 	\centering
@@ -125,6 +126,10 @@ Les courbes théoriques utiles pour l'analyse et la discussion sont présentées
 \clearpage
 \newpage
 \subsection{Discussion}
+Commençons par analyser les courbes pratiques et théoriques pour une résistance de 0 Ohm, en d'autres mots, un court-circuit. La figure \ref{fig:transr0} représente le régime transistoire que nous avons mesurer au laboratoire. Lorsque nous comparons avec la figure théorique \ref{fig:r0}, nous remarquons tout de suite la similitude entre les deux courbes. Le signal à Z = 0, soit à la source, est atténué complètement après un certain temps. Ceci est causé par la réflexion du signal qui est inversé lorsqu'il revient. La courbe en Z théorique lorsque la résistance est de 0 Ohm (figure \ref{fig:zr0} montre bien cet effet. À Z = 0, le signal va rencontrer la première droite de 27.2 V à t = 0 ce qui va créer le front montant de la porte et par la suite, celui-ci va rencontrer la droite -27.2 V à t = 2T ce qui va créer le front descendant. Le signal vu à la charge peut être analysé de la même façon. Le pic est causé par le signal qui rencontre la droit de 27.2 V à environ Z = 30 et t = T. L'incertitude dans un tel montage implique que le signal ne peux pas juste rencontrer la droite positive et celui-ci se doit d'être atténué de 27.2 V quelques nano-secondes plus tard. De plus ce pic est bien présent dans la figure 
+
+
+
 \clearpage
 \newpage
 \section{Projet 3}
