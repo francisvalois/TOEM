@@ -37,7 +37,6 @@ On note dans cette figure que la réflexion est bel et bien faible, mais existan
 
 Dans ce projet, il était demandé de visualiser simultanément les signaux au niveau de la charge et de la source sur la ligne RG-58 de 30m. Cela fut fait pour des charges de respectivement 0 $\Omega$, 27 $\Omega$ et 50$\Omega$. Les courbes obtenues sont présentées à la section suivante.
 \subsection{Présentation des courbes obtenues expérimentalement}
-Pour information, la signal de la source est branché à l'entrée du canal 1 (courbe orange) et le signal au niveau de la charge est branché au canal 2 (courbe mauve).
 \begin{figure}[htb]
 	\centering
 \subfigure[Régime transitoire pour $R = 0 \Omega$]{\includegraphics[scale =0.3]{fig/TR0.JPG} \label{fig:transr0}}
@@ -101,7 +100,7 @@ V^{+}(s) &=  \frac{Z_0}{Z_0 + R_g} V_g (s)\\
 \end{align*}
 \newpage
 \subsection{Présentation des courbes théoriques}
-Les courbes théoriques utiles pour l'analyse et la discussion sont présentées ci-dessous. La courbe au niveau de la source est celle de couleur verte et la courbe au niveau de la charge est celle de couleur rouge.
+Les courbes théoriques utiles pour l'analyse et la discussion sont présentées ci-dessous.
 \setcounter{subfigure}{0}
 \begin{figure}[htb]
 	\centering
@@ -126,10 +125,6 @@ Les courbes théoriques utiles pour l'analyse et la discussion sont présentées
 \clearpage
 \newpage
 \subsection{Discussion}
-Commençons par analyser les courbes pratiques et théoriques pour une résistance de 0 Ohm, en d'autres mots, un court-circuit. La figure \ref{fig:transr0} représente le régime transistoire que nous avons mesurer au laboratoire. Lorsque nous comparons avec la figure théorique \ref{fig:r0}, nous remarquons tout de suite la similitude entre les deux courbes. Le signal à Z = 0, soit à la source, est atténué complètement après un certain temps. Ceci est causé par la réflexion du signal qui est inversé lorsqu'il revient. La courbe en Z théorique lorsque la résistance est de 0 Ohm (figure \ref{fig:zr0} montre bien cet effet. À Z = 0, le signal va rencontrer la première droite de 27.2 V à t = 0 ce qui va créer le front montant de la porte et par la suite, celui-ci va rencontrer la droite -27.2 V à t = 2T ce qui va créer le front descendant. Le signal vu à la charge peut être analysé de la même façon. Le pic est causé par le signal qui rencontre la droit de 27.2 V à environ Z = 30 et t = T. L'incertitude dans un tel montage implique que le signal ne peux pas juste rencontrer la droite positive et celui-ci se doit d'être atténué de 27.2 V quelques nano-secondes plus tard. De plus ce pic est bien présent dans la figure 
-
-
-
 \clearpage
 \newpage
 \section{Projet 3}
@@ -187,6 +182,7 @@ L = 20.8 \left[\mu H\right]
 \newpage
 \section{Projet 4}
 \subsection{Tracé des régimes transitoires à l'oscilloscope}
+\label{s:tracer_transitoire}
 Nous avons réalisé le montage pratique tel qu'illustré à la figure 4 de l'énoncé de laboratoire. L'ordre des lignes de transmission a été respecté. Le tracé (à l'oscilloscope) des réponses transitoires obtenues pour des impédances de respectivement 0 $\Omega$, 50 $\Omega$ et 100 $\Omega$ sont présentées aux figures ci-dessous. Il est à noté que le signal vu de la source est sur le canal 1 (orange), que le signal vu à la jonction entre les deux lignes est sur le canal 2 (bleu) et que le signal vu de la charge est sur le canal 3 (vert).
 
 \begin{figure}[htb]
@@ -274,6 +270,7 @@ On définit l'équation suivante et on la développe selon les valeurs connues
 	\mbox{\subfigure[Diagramme en z pour $R = 0 \Omega$]{\includegraphics[scale =0.25]{fig/2zr0.png} \label{fig:2zr0}}
 		\subfigure[Diagramme en z pour $R = 50 \Omega$]{\includegraphics[scale =0.25]{fig/2zr50.png} \label{fig:2zr50}}}
 \end{figure}
+
 \begin{figure}[htb]
 	\centering
 	\mbox{\subfigure[Diagramme en z pour $R = 100 \Omega$]{\includegraphics[scale =0.25]{fig/2zr100.png} \label{fig:2zr100}}}
@@ -282,3 +279,21 @@ On définit l'équation suivante et on la développe selon les valeurs connues
 \newpage
 
 \subsection{Discussion}
+
+\subsubsection{Régime transitoire}
+Les figures \ref{fig:trans2r0}, \ref{fig:trans2r50} et \ref{fig:trans2r100} présentent les régimes transitoires pour diverses charges. Le code de couleur utilisé est toujours le même, tel que présenté à la section \ref{s:tracer_transitoire}. Les figures \ref{fig:2r0}, \ref{fig:2r50} et \ref{fig:2r100} présentent le pendant théorique des courbes mesurées expérimentalement. Pour ce qui est des courbes présentant le comportement du système avec une résistance $R=0\Omega$, on note premièrement que la courbe théorique relatant le comportement de la tension vue à la source (la courbe bleue) suit le même comportement que celle mesurée expérimentalement. En dehors des limitations physiques de la source de tension, l'incurvation de la courbe expérimentale s'explique par la limite en bande passante de l'oscilloscope ainsi que par la présence d'impédances complexes dans le circuit. 
+
+\paragraph{}Pour ce qui est de la tension vue à la première jonction, on remarque que le comportement est similaire à la théorie. Cependant, le système étudié présente les mêmes limitations. 
+
+\paragraph{}On ne réussit malheureusement pas à afficher une courbe montrant la tension vue aux bornes de la charge, cependant, comme la montée théorique est très rapide et fait intervenir le comportement aux limites du logiciel, il est comprenable qu'il soit difficile de l'afficher. 
+
+\paragraph{}En ce qui concerne la résistance de $50\Omega$, le comportement est pratiquement similaire en tous points. Les transitions mesurées expérimentalement sont moins brusques, mais il est possible de déceler une forte corrélation entre les mesures expérimentale et la théorie. 
+
+\paragraph{}Les courbes présentant le régime transitoire pour une résistance de $100\Omega$ sont en tous points identiques. On voit que le modèle théorique prédit bien le comportement observé au laboratoire. 
+\subsubsection{Diagrammes en z}
+
+Les figures \ref{fig:2zr0}, \ref{fig:2zr50} et \ref{fig:2zr100} présentent le diagramme en z pour différentes résistances placées en fin de ligne. On note que le minimum de réflexion est atteint pour une résistance de $100\Omega$. La résistance de $0\Omega$ présente le nombre le plus élevé de réflexions, ce qui était prédit par les calculs et la théorie vue au cours. La résistance de $50\Omega$ fournit un indice de réflexion mitoyen entre les deux valeurs extrêmes de résistance. Le nombre de réflexion est plus faible que celui avec une résistance de $0\Omega$, mais plus élevé que celui avec une résistance de $100\Omega$. 
+
+\section{Conclusion}
+
+Les projets 1 à 4 témoignent de la véracité du modèle étudié. Les similitudes entre la théorie et l'expérimentation montrent que le modèle étudié est suffisant pour prédire le comportement expérimental des réflexions dans une ligne de transmission avec une ou plusieurs jonctions. Nous avons pu faire l'analyse transitoire des signaux pour différentes valeurs de résistance de charge et ainsi, vérifier les équations entourant les coefficients de réflexions ainsi que le modèle expérimental.  Nous avons montré qu'il est possible d'identifier les différents paramètres d'une charge réactive en bout de ligne au moyen du projet 3. Aussi, lors du dernier projet, il fut possible de vérifier l'impact de l'ajout d'une jonction sur la forme des signaux à la source et aux différentes jonctions. De ce fait, il fut possible d'en tracer les diagrammes en z ainsi que les diagrammes théoriques associés, de manière à mieux saisir le comportement observé. L'ensemble du laboratoire nous a permis de nous familiarisé avec la théorie et d'en comprendre les implications pratiques. 
