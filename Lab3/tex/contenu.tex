@@ -181,7 +181,7 @@ L = 20.8 \left[\mu H\right]
 \end{align*}
 \newpage
 \section{Projet 4}
-\subsubsection*{Tracé des régimes transitoires à l'oscilloscope}
+\subsection{Tracé des régimes transitoires à l'oscilloscope}
 Nous avons réalisé le montage pratique tel qu'illustré à la figure 4 de l'énoncé de laboratoire. L'ordre des lignes de transmission a été respecté. Le tracé (à l'oscilloscope) des réponses transitoires obtenues pour des impédances de respectivement 0 $\Omega$, 50 $\Omega$ et 100 $\Omega$ sont présentées aux figures ci-dessous. Il est à noté que le signal vu de la source est sur le canal 1 (orange), que le signal vu à la jonction entre les deux lignes est sur le canal 2 (bleu) et que le signal vu de la charge est sur le canal 3 (vert).
 
 \begin{figure}[htb]
@@ -193,27 +193,27 @@ Nous avons réalisé le montage pratique tel qu'illustré à la figure 4 de l'é
 		\subfigure[Régime transitoire vu de la source, à la jonction entre les lignes et à la charge pour $R = 100 \Omega$]{\includegraphics[scale =0.3]{fig/2CR100.JPG} \label{fig:trans2r100}}
 \end{figure}
 \newpage
-\subsubsection*{Calcul du coefficient de réflexion à la source}
+\subsection{Calcul du coefficient de réflexion à la source}
 Pour calculer le coefficient de réflexion à la source, on utilise l'équation \ref{eq:reflex} en sachant qu'elle sera la même peu importe la charge:
 \begin{align*}
 \Gamma_g (s) &= \frac{50 - 50}{50 + 50}\\
 &= 0
 \end{align*}
-\subsubsection*{Calcul du coefficient de réflexion du côté de la ligne \# 1}
+\subsection{Calcul du coefficient de réflexion du côté de la ligne \# 1}
 On définit l'équation suivante et on la développe selon les valeurs connues
 \begin{align}
 \Gamma_{11} &= \frac{Z_{02} - Z_{01}}{Z_{02} + Z_{01}}\\
 			&= \frac{93-50}{93 + 50}\notag\\
 			&= 0.3007\notag
 \end{align}
-\subsubsection*{Calcul du coefficient de réflexion du côté de la ligne \# 2}
+\subsection{Calcul du coefficient de réflexion du côté de la ligne \# 2}
 On définit l'équation suivante et on la développe selon les valeurs connues
 \begin{align}
 \Gamma_{22} &= \frac{Z_{01} - Z_{02}}{Z_{01} + Z_{02}}\\
 			&= \frac{50-93}{93 + 50}\notag\\
 			&= -0.3007\notag
 \end{align}
-\subsubsection*{Calcul des coefficients de réflexion du côté des charges}
+\subsection{Calcul des coefficients de réflexion du côté des charges}
 \textbf{Pour R = $0\Omega$}
 \begin{align*}
 \Gamma_c (s) &= \frac{Z_c(s) - Z_0(s)}{Z_c(s) + Z_0(s)}\\
@@ -232,18 +232,48 @@ On définit l'équation suivante et on la développe selon les valeurs connues
 			 &= \frac{100 - 93 }{100 + 93}\\
 			 &= 0.0363
 \end{align*}
-\subsubsection*{Calcul du coefficient de transmission de la ligne \# 1 vers la ligne \# 2}
+\subsection{Calcul du coefficient de transmission de la ligne \# 1 vers la ligne \# 2}
 On définit l'équation suivante et on la développe selon les valeurs connues
 \begin{align}
 \tau_{12} &= (1-\Gamma_{11})\\
 			&= 1 - 0.3007\notag\\
 			&= 0.6993\notag
 \end{align}
-\subsubsection*{Calcul du coefficient de transmission de la ligne \# 2 vers la ligne \# 1}
+\subsection{Calcul du coefficient de transmission de la ligne \# 2 vers la ligne \# 1}
 On définit l'équation suivante et on la développe selon les valeurs connues
 \begin{align}
 \tau_{21} &= (1-\Gamma_{22})\\
 			&= 1 + 0.3007\notag\\
 			&= 1.3007\notag
 \end{align}
+\subsection{Régimes transitoires théoriques }
 
+\begin{figure}[htb]
+	\centering
+\mbox{\subfigure[Régime transitoire théorique vu de la source, à la jonction entre les lignes et à la charge pour $R = 0 \Omega$]{\includegraphics[scale =0.3]{fig/2r0.png} \label{fig:2r0}}}
+\end{figure}
+
+
+
+\begin{figure}[htb]
+	\centering
+	\mbox{\subfigure[Régime transitoire théorique vu de la source, à la jonction entre les lignes et à la charge pour $R = 50 \Omega$]	{\includegraphics[scale =0.25]{fig/2r50.png} \label{fig:2r50}}
+		\subfigure[Régime transitoire théorique vu de la source, à la jonction entre les lignes et à la charge pour $R = 100 \Omega$]{\includegraphics[scale =0.25]{fig/2r100.png} \label{fig:2r100}}}
+\end{figure}
+
+
+\subsection{Diagrammes en z}
+
+\begin{figure}[htb]
+	\centering
+	\mbox{\subfigure[Diagramme en z pour $R = 0 \Omega$]{\includegraphics[scale =0.25]{fig/2zr0.png} \label{fig:2zr0}}
+		\subfigure[Diagramme en z pour $R = 50 \Omega$]{\includegraphics[scale =0.25]{fig/2zr50.png} \label{fig:2zr50}}}
+\end{figure}
+\begin{figure}[htb]
+	\centering
+	\mbox{\subfigure[Diagramme en z pour $R = 100 \Omega$]{\includegraphics[scale =0.25]{fig/2zr100.png} \label{fig:2zr100}}}
+\end{figure}
+\clearpage
+\newpage
+
+\subsection{Discussion}
