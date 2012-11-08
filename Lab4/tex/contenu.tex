@@ -10,14 +10,23 @@
 \label{s:experimentation}
 \chapter{Laboratoire 2}
 \subsection{A)}
-L'appareil décrit dans la question est un coupleur directif. Les figures \ref{fig:coupleurdirectif1} et \ref{fig:coupleurdirectif2} représente le coupleur directif fabriqué par Lab-Volt.
+L'appareil décrit dans la question est un coupleur directif. Les figures \ref{fig:coupleurdirectif1} et \ref{fig:coupleurdirectif2} représentent le coupleur directif fabriqué par Lab-Volt.
+\begin{figure}
+\centering
+\includegraphics[scale=0.5]{coupleur_directif_1.png}
+\caption{Figure montrant une représentation d'un coupleur directif}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=0.5]{coupleur_directif_2.png}
+\caption{Figure montrant une représentation du principe de la propagation des ondes dans un coupleur directif}
+\end{figure}
 
 \subsection{B)}
-Oui, car avec un potentiel nul, la diode de Gunn ne peut tout simplement pas conduire un courant.
+Oui, suivant la courbe v-i de la diode de Gunn, on remarque que pour une tension de polarisation nulle, aucun courant ne circule.
 
 \subsection{C)}
-Nous modulons par un signal carré de 1kHz car l’électronique autour du “0” Hertz n’est pas facile à cause des tensions de polarisation et de décalage (“offset”) qu’on élimine souvent par des condensateurs de
-découplage ou avec des ajustements externes.
+Nous modulons par un signal carré de 1kHz, car l’électronique autour du DC n’est pas facile à réaliser à cause des tensions de polarisation et de décalage qu’on élimine souvent par des condensateurs de découplage ou par des ajustements externes.
 
 \subsection{D)}
 En ayant un signal entrant de 2mW et un couplage de 10 dB, nous obtenons un signal C+D de $\frac{2mW}{10} = 200\mu W$. Sachant que le coupleur possède une directivité de 30 dB, nous obtenons les équations suivantes : 
@@ -30,13 +39,11 @@ En solutionnant, nous trouvons que C = 199.8 $\mu W$ et D = 0.2 $\mu W$.
 
 Si le signal de 2 mW entre dans l'entrée 1, nous obtenons dans l'accès 2 un signal de 1.8 mW, dans l'accès 3, un signal de 199.8 $\mu W$ et dans l'accès 4 un signal de de 0.2 $\mu W$.
 
-\subsection{E)
-Il suffit de modifier le calibre vers la plage -20 dB sans modifier le gain, ni avec la fréquence centrale. 
+\subsection{E}
+Pour que l'on se rende compte que la lecture doit être faite dans un calibre de -20 dB au ROS-mètre, on doit soit saturer l'aiguille ou la voir bouger d'une très faible amplitude. Suivant l'un ou l'autre des cas, on décide de simplement changer le calibre de l'appareil afin de profiter d'une déviation supérieure de l'aiguille et ce, sans accoter dans l'une ou l'autre des extrémités. Pour ce faire, il suffit de modifier le calibre vers la plage -20 dB sans modifier le gain intrinsèque ni la fréquence centrale de l'accordeur. 
 
 \subsection{F}
-En diminuant la largeur de bande, on diminue la puissance du bruit sur le signal total. 
+En posant l'hypothèse que le bruit suit une loi de dispersion uniforme et que le signal est contenu dans une bande finie, on suppose que la puissance du bruit sur la puissance du signal augmente avec la largeur de bande. En diminuant la largeur de bande sur l'appareil, on diminue la puissance du bruit sur le signal total. 
 
-
-\subsection{}
 
 
