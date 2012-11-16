@@ -1,0 +1,105 @@
+%!TEX root = ../rapport.tex
+%!TEX encoding = UTF-8 Unicode
+
+% Chapitres "Introduction"
+
+% modifié par Francis Valois, Université Laval
+% 31/01/2011 - version 1.0 - Création du document
+
+
+\label{s:experimentation}
+\chapter{Laboratoire 5}
+\section{Projet 1: Mesure de longueur}
+La ligne que nous cherchons à mesurer est une combinaison de deux lignes de 6m de câble de RG59. La démarche que nous employons est la suivante:
+\begin{enumerate}
+\item Insérer un court-circuit comme charge en fin de ligne;
+\item Localiser la fréquence pour laquelle la tension est maximale;
+\item Localiser la fréquence pour laquelle la tension est minimale;
+\item Utiliser l'équation : $ l = \frac{v_p}{4\left|f_{cc} - f_{co}\right|}$
+\end{enumerate}
+Nous avons choisi cette démarche en sachant que l'équation présentée dans notre démarche permet de localiser un court-circuit sur une ligne. Ce faisant, on obtient directement la distance par rapport à la source, tel que désiré. Les données obtenues sont les suivantes:
+\begin{itemize}
+\item $f_{co} = 4.05MHz $
+\item $f_{cc} = 9MHz$
+\end{itemize}
+On obtient alors:
+\begin{equation}
+l = \frac{v_p}{4\left|f_{cc} - f_{co}\right|} = \frac{0.66\cdot c}{4\times 10^6\left|9 - 4.05\right|} = 10m
+\end{equation}
+\section{Projet 2: Effet des charges sur les signaux à l'entrée}
+Les résultats obtenus pour l'expérience sur la variation de fréquence pour caractériser la localisation des min et des max en courant et en tension sont présentés dans les tableaux \ref{tab:1}, \ref{tab:2}.
+\begin{table}[htbp]
+  \centering
+    \begin{tabular}{|c|c|c|c|c|}\hline
+    Fréquence & $V_{min}$ & $V_{max}$ & $I_{min}$ & $I_{max}$ \\\hline
+    MHz   & mV    & mV    & mA    & mA \\\hline
+    0.3   &       & 3040  & 88    &  \\
+    4.377 & 220   &       &       & 408 \\
+    9.017 &       & 2940  & 44    &  \\
+    13.407 & 240   &       &       &  \\
+    13.507 &       &       &       & 460 \\
+    17.217 &       & 2900  &       &  \\
+    18.097 &       &       & 44    &  \\\hline
+    \end{tabular}%
+      \caption{Résultats obtenus pour un circuit ouvert en fin de ligne}
+  \label{tab:1}%
+\end{table}%
+
+\begin{table}[htbp]
+  \centering
+    \begin{tabular}{|c|c|c|c|c|}\hline
+    Fréquence & $V_{min}$ & $V_{max}$ & $I_{min}$ & $I_{max}$ \\\hline
+    MHz   & mV    & mV    & mA    & mA \\\hline
+          &       &       &       &  \\
+    4.1   &       &       & 148   &  \\
+    4.3   &       & 2.26  &       &  \\
+    8.93  & 940   &       &       &  \\
+    8.73  &       &       &       & 340 \\
+    12.89 &       & 2.22  &       &  \\
+    13.07 &       &       & 166   &  \\
+    17.74 & 960   &       &       &  \\
+    17.87 &       &       &       & 400 \\\hline
+    \end{tabular}%
+  \caption{Résultats obtenus pour un charge de 27$\Omega$ en fin de ligne}
+  \label{tab:2}%
+\end{table}%
+\section{Projet 3: Comportement en fréquence à l'entrée et au milieu avec court-circuit}
+Les multiples et interminables... prises de données sont présentées au tableau \ref{tab:3}.
+\begin{table}[htbp]
+  \centering
+    \begin{tabular}{|c|c|c|c|c|}\hline
+    Fréquence & $V\left(\frac{l}{2}\right)$ & $V(l)$ & $I(l)$ & $\Delta \Phi$ \\\hline
+    MHz   & mV    & mV    & mA    & ns \\\hline
+    0.5   & 2940  & 2900  & 152   & -520 \\
+    1     & 2740  & 2600  & 224   & -240 \\
+    1.5   & 2480  & 2200  & 284   & -170 \\
+    2     & 2220  & 1800  & 336   & -140 \\
+    2.5   & 2000  & 1400  & 356   & -108 \\
+    3     & 1800  & 1000  & 384   & -90 \\
+    3.5   & 1640  & 680   & 400   & -76 \\
+    4     & 1500  & 340   & 408   & -58 \\
+    4.5   & 1400  & 200   & 424   & 10 \\
+    5     & 1300  & 440   & 420   & 38 \\
+    5.5   & 1200  & 760   & 384   & 35 \\
+    6     & 1120  & 1060  & 372   & 30 \\
+    6.5   & 1000  & 1380  & 372   & 27 \\
+    7     & 920   & 1720  & 352   & 26 \\
+    7.5   & 800   & 2080  & 320   & 23 \\
+    8     & 680   & 2400  & 276   & 23 \\
+    8.5   & 540   & 2660  & 216   & 20 \\
+    9     & 340   & 2840  & 124   & 16 \\
+    9.5   & 160   & 2800  & 52    & -2 \\
+    10    & 280   & 2680  & 112   & -25 \\
+    10.5  & 500   & 2400  & 192   & -27 \\
+    11    & 720   & 2080  & 272   & -26 \\
+    11.5  & 940   & 1640  & 324   & -26 \\
+    12    & 1160  & 1260  & 372   & -24 \\
+    12.5  & 1320  & 860   & 412   & -22 \\
+    13    & 1500  & 500   & 436   & -18 \\
+    13.5  & 1760  & 252   & 460   & -2 \\
+    14    & 2000  & 630   & 460   & 6 \\\hline
+    \end{tabular}%
+   \caption{Tableau présentant les données obtenues lors de l'analyse du comportement en fréquence à l'entrée et au milieu avec un circuit ouvert}
+  \label{tab:3}%
+\end{table}%
+
