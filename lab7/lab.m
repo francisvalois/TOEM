@@ -24,4 +24,9 @@ for k = 1:3
     lambda_g(k,:) = real(lambda./sqrt(1-(fc2(k)./f).^2));
 end
 
+vpz = zeros(3,26);
+for k = 1:3
+    vpz(k,:) = real(vp./sqrt(1-(fc2(k)./f).^2));
+end
 
+vg = vp^2./vpz;
