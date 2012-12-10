@@ -1,0 +1,27 @@
+m = 0:6;
+n = 0:6;
+a = 22.86/1000;
+b = 10.16/1000;
+vp = 3*10^8;
+fc = zeros(7,7);
+
+for i=m
+    for j=n
+       fc(i+1,j+1) = vp/2*sqrt((i/a)^2+(j/b)^2);
+    end
+end
+
+fc2 = zeros(3,1);
+fc2(1) = fc(2,1);
+fc2(2) = fc(3,1);
+fc2(3) = fc(1,2);
+
+
+f = 0:1*10^9:25*10^9;
+lambda = vp./f;
+lambda
+for k = fc2
+    lambda_g = lambda./sqrt(1-(fc2./f)^2);
+end
+
+
