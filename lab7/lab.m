@@ -30,3 +30,9 @@ for k = 1:3
 end
 
 vg = vp^2./vpz;
+
+eta = zeros(3,26);
+
+for k = 1:3
+    eta(k,:) = real(377./sqrt(1-(fc2(k)./f).^2));
+end
