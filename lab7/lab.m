@@ -36,3 +36,7 @@ eta = zeros(3,26);
 for k = 1:3
     eta(k,:) = real(377./sqrt(1-(fc2(k)./f).^2));
 end
+
+syms x
+test = -0.2739*x^6 + 2.5479*x^5 - 8.6836*x^4 + 13.553*x^3 - 11.174*x^2 + 1.145*x - 30.8136;
+solve(test,x)
