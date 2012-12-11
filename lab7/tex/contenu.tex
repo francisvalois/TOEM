@@ -13,7 +13,7 @@
 Selon les documents de spécifications obtenues en ligne, la largeur interne du guide d'onde de type WR-90 est de 22.86 mm et la hauteur interne est de 10.16 mm.
 
 \subsection{Calcul de la fréquence de $f_c$}
-La fréquence de coupure pour un guide d'onde rectangulaire en fonction des différents modes TE est donné par l'équation suivante :
+La fréquence de coupure pour un guide d'onde rectangulaire en fonction des différents modes TE est donnée par l'équation suivante :
 
 \begin{equation}
 	f_{c_{mn}} = \frac{v_p}{2}\sqrt{\left(\frac{m}{a}\right)^2+\left(\frac{n}{b}\right)^2}
@@ -33,7 +33,7 @@ Où:
 \end{itemize}
 
 
-Les fréquences de coupures pour les modes supérieurs ne sont pas présentées car elle sont supérieures à la fréquence de fonctionnement, ce qui va atténuer ou empêcher la diffusion de l'onde dans le guide.
+Les fréquences de coupures pour les modes supérieurs ne sont pas présentées, car elles sont supérieures à la fréquence de fonctionnement, ce qui va atténuer ou empêcher la diffusion de l'onde dans le guide.
 
 \subsection{Calcul de la vitesse de groupe $v_g$ selon la fréquence}
 La vitesse de groupe pour chacun des modes est obtenue à l'aide de l'équation suivante :
@@ -49,7 +49,14 @@ Où :
 \end{itemize}
 
 
-Ainsi pour une fréquence de fonctionnement allant de 0 à 25 GHz, nous obtenons les vitesses de groupe affichées à la figure \ref{fig1}. Les trois modes de fonctionnement obtenus précédemement sont respectivement représentés par les 3 courbes sur le graphique. De plus, les valeurs numériques ne sont pas présentées car celles-ci ne font qu'alourdir le rapport et peuvent être déduites de la figure.
+Ainsi pour une fréquence de fonctionnement allant de 0 à 25 GHz, nous obtenons les vitesses de groupe affichées à la figure \ref{fig1}. Les trois modes de fonctionnement obtenus précédemment sont respectivement représentés par les 3 courbes sur le graphique. De plus, les valeurs numériques ne sont pas présentées, car celles-ci ne font qu'alourdir le rapport et peuvent être déduites de la figure.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=0.45]{fig2.png}
+    \caption{Figure présentant la vitesse de groupe d'une onde en fonction de la fréquence de fonctionnement pour 3 différents modes TE}
+    \label{fig1}
+\end{figure}
 
 \subsection{Calcul de la longueur d'onde $\lambda_g$ selon la fréquence}
 La longueur d'onde dans le guide est donnée par l'équation suivante :
@@ -65,9 +72,17 @@ Où:
 \end{itemize}
 
 
-Sachant que la longueur d'onde dans le guide est donnée par l'équation \ref{eq1}, il est possible de trouver $\lambda_g$ pour une fréquence entre 0 et 25 GHz. Les longueurs d'ondes guidées sont affichées à la figure \ref{fig2}. Comme précédement, les 3 différents mode sont affichés sur la figure et les résultats numériques ne sont pas affichés pour simplifier la présentation du rapport.
+Sachant que la longueur d'onde dans le guide est donnée par l'équation \ref{eq1}, il est possible de trouver $\lambda_g$ pour une fréquence entre 0 et 25 GHz. Les longueurs d'ondes guidées sont affichées à la figure \ref{fig2}. Comme précédemment, les 3 différents modes sont affichés sur la figure et les résultats numériques ne sont pas affichés pour simplifier la présentation du rapport.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=0.45]{fig1.png}
+    \caption{Figure présentant la longueur d'onde guidées en fonction de la fréquence de fonctionnement pour 3 différents modes TE}
+    \label{fig2}
+\end{figure}
 
 \begin{equation}
+	\label{eq1}
 	\lambda = \frac{v_p}{f}
 \end{equation}
 
@@ -76,6 +91,22 @@ L'impédance intrinsèque transverse peut être obtenue à l'aide de l'équation
 \begin{equation}
 	\eta_{GTE} = \frac{\eta}{\sqrt{1-\left(\frac{f_c}{f}\right)^2}}
 \end{equation}
+Où:
+\begin{itemize}
+	\item $\eta$ est l'impédance intrinsèque du guide d'onde, dans notre cas $\eta = 377\Omega$, car nous sommes dans l'air;
+	\item $f_c$ est la fréquence de coupure pour un mode donné;
+	\item $f$ est la fréquence de l'onde dans le guide.
+\end{itemize}
+
+La figure \ref{fig3} représente l'impédance intrinsèque transverse pour les 3 modes d'intérêts entre des fréquences de 0 et 25 GHz.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=0.45]{fig3.png}
+    \caption{Figure présentant l'impédance intrinsèque d'une guide d'onde en fonction de la fréquence de fonctionnement pour 3 différents modes TE}
+    \label{fig3}
+\end{figure}
+
 
 \section{Projet 2: Mesure directe de la fréquence}
 8V
