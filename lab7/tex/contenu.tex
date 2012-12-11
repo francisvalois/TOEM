@@ -125,3 +125,27 @@ Le montage employé pour effectuer les mesures est le montage présenté à la f
 \paragraph{}Lorsqu'on effectue les mesures avec une tension de 4V, le système devient instable et les mesures sortent des plages établies plus tôt. Le système devient très sensible au bruit. L'amplitude de la tension n'est pas contenue dans un seul mode et comme on travaille dans une échelle de puissance très faible (-50dB), l'impact du bruit sur le signal devient très grand à mesure que l'on diminue la tension.
 
 \section{Projet 3: Mesure directe de la fréquence}
+
+\section{Projet 4: Couplage et directivité}
+Ce projet est séparé en 2 partie. La première partie consiste à effectuer le montage de la figure \ref{montage1} pour calibré l'entrée du coupleur directif à un niveau relatif de -30 dB sur le ROS-Mètre. Une fois l'atténuateur calibré, il faut effectuer le seconde montage présenté à la figure \ref{montage2} et mesurer le niveau relatif au ROS-Mètre La différence entre ce point de fonctionnement et le point relatif de -30 dB obtenue précédemement donne le couplage du coupleur directif.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=0.65]{montage1.png}
+    \caption{Montage devant être effectué pour calibrer le ROS-Mètre à -30 dB}
+    \label{montage1}
+\end{figure}
+
+Pour obtenir l'atténuation entre la sortie 3 et la sortie 4, il suffit de procéder de la manière. À partir du montage \ref{montage2}, on calibre le ROS-Mètre à -30 dB à l'aide de l'atténuateur variable. Par la suite, en inversant la charge de la sortie 4 et le détecteur à cristal de la sortie 3, on trouve le niveau relatif de tension pour ce fonctionnement. La différence entre ce point de fonctionnement et le point relatif de -30 dB obtenue précédemement donne la directivité du coupleur.
+
+Dans notre cas, nous trouvons une valeur de couplage de -20.6 dB et une directivité de -26.5 dB.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=0.65]{montage2.png}
+    \caption{Montage devant être effectué pour mesurer le couplage d'une coupleur directif}
+    \label{montage2}
+\end{figure}
+
+\section{Projet 5: Impédance caractéristique}
+
