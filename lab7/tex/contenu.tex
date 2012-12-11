@@ -10,33 +10,72 @@
 \label{s:experimentation}
 \chapter{Laboratoire 6}
 \section{Projet 1: Paramètres théoriques selon les modes}
+Selon les documents de spécifications obtenues en ligne, la largeur interne du guide d'onde de type WR-90 est de 22.86 mm et la hauteur interne est de 10.16 mm.
+
 \subsection{Calcul de la fréquence de $f_c$}
-Les modes sont   
-6561679790.02625 (1,0)
-13123359580.0525 (2,0)
-14763779527.5591 (0,1)
+La fréquence de coupure pour un guide d'onde rectangulaire en fonction des différents modes TE est donné par l'équation suivante :
+
+\begin{equation}
+	f_{c_{mn}} = \frac{v_p}{2}\sqrt{\left(\frac{m}{a}\right)^2+\left(\frac{n}{b}\right)^2}
+\end{equation}
+Où:
+\begin{itemize}
+	\item $v_p$ est la vitesse de propagation de l'onde dans le guide d'ondes, ici la vitesse de la lumière dans le vide soit $3\cdot10^8m/s$;
+	\item $m$ et $n$ sont les deux indices du mode TE à évaluer;
+	\item $a$ et $b$ sont respectivement la largeur et la hauteur du guide d'onde en mètre, ici 0.02286m et 0.01016m.
+\end{itemize}
+
+À l'aide de l'équation précédente, il suffit de trouver pour quels indices TE $(m,n)$, la fréquence de coupure est plus petite que la fréquence du mode d'opération. Dans le cas d'une opération à une fréquence de 15 GHz, nous trouvons les 3 modes d'opérations suivants :
+\begin{itemize}
+	\item $F_c = 6.56 GHz$ pour un mode d'opération $(1,0)$;
+	\item $F_c = 13.12 GHz$ pour un mode d'opération $(2,0)$;
+	\item $F_c = 14.76 GHz$ pour un mode d'opération $(0,1)$
+\end{itemize}
+
+
+Les fréquences de coupures pour les modes supérieurs ne sont pas présentées car elle sont supérieures à la fréquence de fonctionnement, ce qui va atténuer ou empêcher la diffusion de l'onde dans le guide.
 
 \subsection{Calcul de la vitesse de groupe $v_g$ selon la fréquence}
+La vitesse de groupe pour chacun des modes est obtenue à l'aide de l'équation suivante :
 
-ça commence a 7 ghz
-  \begin{table}[htbp]
-    \centering
-    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|} \hline
-	0.0487 & 0.0398 & 0.0340 & 0.0299 & 0.0267 & 0.0243 & 0.0222 & 0.0206 & 0.0191 & 0.0179 & 0.0168 & 0.0159 & 0.0150 & 0.0143 & 0.0136 & 0.0130 & 0.0124\\ 
-	0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0615 & 0.0413 & 0.0328 & 0.0278 & 0.0244 & 0.0218 & 0.0199 & 0.0183 & 0.0170 & 0.0159 & 0.0149 & 0.0141\\ 
-	0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.1131 & 0.0486 & 0.0356 & 0.0291 & 0.0251 & 0.0222 & 0.0201 & 0.0184 & 0.0170 & 0.0159 & 0.0149 \\\hline
-    
-    \end{tabular}%
-        \caption{Impédances de charges selon les deux méthodes pour deux différents cas}
-    \label{tab:4}%
-\end{table}%
+\begin{equation}
+	v_g = v_p\sqrt{1-\left(\frac{f_c}{f}\right)^2}
+\end{equation}
+Où :
+\begin{itemize}
+	\item $v_p$ est la vitesse de propagation de l'onde dans le guide d'ondes, ici la vitesse de la lumière dans le vide soit $3\cdot10^8m/s$;
+	\item $f_c$ est la fréquence de coupure pour un mode donné;
+	\item $f$ est la fréquence de l'onde dans le guide.
+\end{itemize}
 
 
+Ainsi pour une fréquence de fonctionnement allant de 0 à 25 GHz, nous obtenons les vitesses de groupe affichées à la figure \ref{fig1}. Les trois modes de fonctionnement obtenus précédemement sont respectivement représentés par les 3 courbes sur le graphique. De plus, les valeurs numériques ne sont pas présentées car celles-ci ne font qu'alourdir le rapport et peuvent être déduites de la figure.
 
 \subsection{Calcul de la longueur d'onde $\lambda_g$ selon la fréquence}
+La longueur d'onde dans le guide est donnée par l'équation suivante :
+
+\begin{equation}
+	\lambda_g = \frac{\lambda}{\sqrt{1-\left(\frac{f_c}{f}\right)^2}}
+\end{equation}
+Où:
+\begin{itemize}
+	\item $\lambda$ est la longueur d'onde du signal traversant le guide; 
+	\item $f_c$ est la fréquence de coupure pour un mode donné;
+	\item $f$ est la fréquence de l'onde dans le guide.
+\end{itemize}
+
+
+Sachant que la longueur d'onde dans le guide est donnée par l'équation \ref{eq1}, il est possible de trouver $\lambda_g$ pour une fréquence entre 0 et 25 GHz. Les longueurs d'ondes guidées sont affichées à la figure \ref{fig2}. Comme précédement, les 3 différents mode sont affichés sur la figure et les résultats numériques ne sont pas affichés pour simplifier la présentation du rapport.
+
+\begin{equation}
+	\lambda = \frac{v_p}{f}
+\end{equation}
 
 \subsection{Calcul de la l'impédance intrinsèque transverse du guide $\eta_{GTE}$ selon la fréquence}
-
+L'impédance intrinsèque transverse peut être obtenue à l'aide de l'équation suivante :
+\begin{equation}
+	\eta_{GTE} = \frac{\eta}{\sqrt{1-\left(\frac{f_c}{f}\right)^2}}
+\end{equation}
 
 \section{Projet 2: Mesure directe de la fréquence}
 8V
