@@ -53,10 +53,20 @@ On vérifie au moyen de la figure \ref{fig1} que le régulateur a exactement la 
 \label{fig1}
 \end{figure}
 \section{Expérimentation}
-Afin de corriger les paramètres théoriques du régulateur déterminé lors de la préparation, il est nécessaire de procéder à un essai d'identification du procédé analogique. La figure \ref{fig1} présente la réponse obtenue à un échelon unitaire de de consigne. Au moyen de ident, le procédé continu a été identifié comme le procédé suivant:
+Afin de corriger les paramètres théoriques du régulateur déterminé lors de la préparation, il est nécessaire de procéder à un essai d'identification du procédé analogique. La figure \ref{fig5} présente la réponse obtenue à un échelon unitaire de de consigne. Au moyen de ident, le procédé continu a été identifié comme le procédé suivant:
 \begin{gather}
 G_p(s) = \frac{1.0182}{(14.2776s +1)(3.2146s + 1)}
 \end{gather}
+
+Selon ident, le procédé identifié possède une corrélation de 99.67\% avec le modèle.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[scale=0.6]{procede_test.png}
+\caption{Schéma bloc du système d'asservissement numérique du procédé analogique}
+\label{fig5}
+\end{figure}
+
 Le temps d'échantillonnage étant de 4 secondes, il est possible d'effectuer la conversion vers le domaine discret directement dans matlab. Le procédé numérique résultant est présenté ci-dessous:
 \begin{gather}
 G_p(z) = \frac{0.1105z + 0.06664}{z^2 -1.044z + 0.2177}
@@ -65,11 +75,27 @@ Comme le procédé est différent ce celui déterminé lors de la préparation, 
 \begin{gather}
 G_c(z) = \frac{0.2z^{3} + 0.4z^{2} + 0.3z^{1} + 0.1}{z^4 - 0.2z^{3} - 0.4z^{2} - 0.3z^{1} - 0.1}\cdot \frac{z^2 -1.044z + 0.2177}{0.1105z + 0.06664}
 \end{gather}
-Le schéma bloc du système d'asservissement numérique est présenté à la figure \ref{fig4} et a été réalisé de manière pratique dans le laboratoire. Afin de valider les performances, nous avons procédé à deux essais de validation, soit un essai avec un échelon unitaire et un essai avec un échelon de quatre. Les comparaisons entre les performances obtenues avec le modèle théorique et le prototype expérimental sont présentées aux figures \ref{fig1} et \ref{fig1} pour les essais avec un échelon unitaire et un échelon de quatre respectivement. 
+Le schéma bloc du système d'asservissement numérique est présenté à la figure \ref{fig2} et a été réalisé de manière pratique dans le laboratoire. Afin de valider les performances, nous avons procédé à deux essais de validation, soit un essai avec un échelon unitaire et un essai avec un échelon de quatre. Les comparaisons entre les performances obtenues avec le modèle théorique et le prototype expérimental sont présentées aux figures \ref{fig3} et \ref{fig4} pour les essais avec un échelon unitaire et un échelon de quatre respectivement. 
+
+
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[scale=0.2]{lab6_commande.png}
+\caption{Schéma bloc du système d'asservissement numérique du procédé analogique}
+\label{fig2}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[scale=0.5]{essai1.png}
+\caption{Schéma bloc du système d'asservissement numérique du procédé analogique}
+\label{fig3}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[scale=0.5]{essai2.png}
 \caption{Schéma bloc du système d'asservissement numérique du procédé analogique}
 \label{fig4}
 \end{figure}
