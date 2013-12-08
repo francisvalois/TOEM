@@ -63,7 +63,7 @@ Selon ident, le procédé identifié possède une corrélation de 99.67\% avec l
 \begin{figure}[htbp]
 \centering
 \includegraphics[scale=0.6]{procede_test.png}
-\caption{Schéma bloc du système d'asservissement numérique du procédé analogique}
+\caption{Comparaison de la réponse à un échelon unitaire du procédé analogique discrétisé avec un temps d'échantillonnage de 4 secondes et du modèle déterminé au moyen de ident }
 \label{fig5}
 \end{figure}
 
@@ -89,13 +89,16 @@ Le schéma bloc du système d'asservissement numérique est présenté à la fig
 \begin{figure}[htbp]
 \centering
 \includegraphics[scale=0.5]{essai1.png}
-\caption{Schéma bloc du système d'asservissement numérique du procédé analogique}
+\caption{Résultats de l'essai de validation des performances au moyen d'un échelon unitaire sur le procédé analogique discrétisé avec un temps d'échantillonnage de 4 secondes.}
 \label{fig3}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[scale=0.5]{essai2.png}
-\caption{Schéma bloc du système d'asservissement numérique du procédé analogique}
+\caption{Résultats de l'essai de validation des performances au moyen d'un échelon de 4 sur le procédé analogique discrétisé avec un temps d'échantillonnage de 4 secondes.}
 \label{fig4}
 \end{figure}
+\clearpage
+\section{Discussion des résultats}
+Au moyen de l'essai d'identification du modèle présenté à la figure \ref{fig5} il est possible de constater que la corrélation est excellente et que la représentation du modèle analogique discrétisé est juste est suffisamment précise pour fins de calculs. La méthode de calcule employée lors de la préparation nous a permis d'effectuer une modification du régulateur à appliquer au système au moyen de modifications mineurs. Il s'agit ici de l'avantage de la synthèse directe, qui permet, lorsqu'on travail dans le domaine discret, de fournir une méthode de réglage efficace lorsque le procédé à réguler change. Cette méthode requiert moins de traitement que la méthode dans le domaine continu et l'application est directe.
