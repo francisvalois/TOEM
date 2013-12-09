@@ -88,17 +88,19 @@ Le schéma bloc du système d'asservissement numérique est présenté à la fig
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[scale=0.5]{essai1.png}
+\includegraphics[scale=0.4]{essai1.png}
 \caption{Résultats de l'essai de validation des performances au moyen d'un échelon unitaire sur le procédé analogique discrétisé avec un temps d'échantillonnage de 4 secondes.}
 \label{fig3}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[scale=0.5]{essai2.png}
+\includegraphics[scale=0.4]{essai2.png}
 \caption{Résultats de l'essai de validation des performances au moyen d'un échelon de 4 sur le procédé analogique discrétisé avec un temps d'échantillonnage de 4 secondes.}
 \label{fig4}
 \end{figure}
 \clearpage
 \section{Discussion des résultats}
 Au moyen de l'essai d'identification du modèle présenté à la figure \ref{fig5} il est possible de constater que la corrélation est excellente et que la représentation du modèle analogique discrétisé est juste est suffisamment précise pour fins de calculs. La méthode de calcule employée lors de la préparation nous a permis d'effectuer une modification du régulateur à appliquer au système au moyen de modifications mineurs. Il s'agit ici de l'avantage de la synthèse directe, qui permet, lorsqu'on travail dans le domaine discret, de fournir une méthode de réglage efficace lorsque le procédé à réguler change. Cette méthode requiert moins de traitement que la méthode dans le domaine continu et l'application est directe.
+
+\paragraph{}Au moyen de l'essai réalisé au moyen d'un échelon unitaire, présenté à la figure \ref{fig3}, on remarque que l'erreur entre la réponse réelle et la réponse du modèle est pratiquement négligeable et inférieure à 3\% en tout temps. Dans les plages prévues dans la conception du régulateur, on remarque que la synthèse directe nous fournit un régulateur remplissant la réponse en boucle fermée demandée. Cependant, lorsqu'on emploi un échelon n'étant pas unitaire, on remarque, à la figure \ref{fig4}, qu'il y a un fort dépassement causé par le régulateur. On constate donc que le procédé n'est pas linéaire et qu'il faudrait modifier les paramètres du régulateurs pour atteindre la réponse demandée. Il est à noter que l'erreur causée par le dépassement atteint les 15\%. On en retient que la synthèse directe fournie une régulateur remplissant la fonction de transfert demandé en boucle fermée, cependant, le procédé ne doit rester linéaire si on veut éviter une erreur de modélisation et un comportement indésirable du régulateur.
